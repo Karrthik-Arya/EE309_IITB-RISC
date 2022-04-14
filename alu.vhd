@@ -114,8 +114,8 @@ begin
 			zero<= '0';
 	end if; 
 	elsif() then
-	--pc
+	--pc-1
 		temp := to_integer(unsigned(pc_in)) -1;
-		t3 <= std_logic_vector(to_unsigned(temp,16)
+		t3 <= std_logic_vector(to_unsigned(temp,16);
 	end process;
 end working;

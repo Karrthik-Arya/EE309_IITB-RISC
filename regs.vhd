@@ -10,6 +10,7 @@ entity registers is
 			reg_a3: in std_logic_vector(2 downto 0);
 			t1: out std_logic_vector(15 downto 0);
 			t2: out std_logic_vector(15 downto 0);
+			t2_in: in std_logic_vector(15 downto 0);
 			t3: in std_logic_vector(15 downto 0);
 			shift7: in std_logic_vector(15 downto 0); 
 			pc_in: in std_logic_vector(15 downto 0);
@@ -40,7 +41,8 @@ begin
 	if (state = "000111") then
 		regs(to_integer(unsigned(reg_a3)))<= t3;
 	elsif (state="") then
-		regs(to_integer(unsigned(reg_a3)))<= shift7
+		regs(to_integer(unsigned(reg_a3)))<= shift7;
+	end if;
 	end if;
 end process;
 end working;
