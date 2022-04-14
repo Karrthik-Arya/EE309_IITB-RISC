@@ -27,14 +27,16 @@ type mem_array is array (0 to 31 ) of std_logic_vector (15 downto 0);
    ); 
 regs_read: process(clk)
 begin 
- if(rising_edge(clk)) then	
+ if(falling_edge(clk)) then	
 	if (state = "000010") then
 		t1 <= regs(to_integer(unsigned(reg_a1)));
 		t2 <= regs(to_integer(unsigned(reg_a2)));
 	end if;
  end process;
  
-regs_write: process(falling_edge(clk)) then
+regs_write: process(clk)
+begin
+ if (rising_edge(clk)) then
 	if (state = "000111") then
 		regs(to_integer(unsigned(reg_a3)))<= t3;
 	elsif (state="") then
