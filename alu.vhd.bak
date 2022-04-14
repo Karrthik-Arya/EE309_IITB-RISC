@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use ieee.numeric_std.all;
+use work.Adder_4Bit.all;
+use work.Gates.all;
+
+entity alu(
+	port(state: in std_logic_vector(5 downto 0);
+	 t1: in std_logic_vector(15 downto 0);
+	 t2: in std_logic_vector(15 downto 0);
+	 pc_in: in std_logic_vector(15 downto 0);
+	 one_bit_shifter: in std_logic_vector(15 downto 0);
+	 sign_extender_10: in std_logic_vector(15 downto 0);
+	 sign_extender_6: in std_logic_vector(15 downto 0);
+	 state: in std_logic_vector(5 downto 0);
+	 t3: out std_logic_vector(15 downto 0);
+	 pc_out: out std_logic_vector(15 downto 0);
+	 );
+	 end entity;
+	 
+architecture working of alu is
+begin
+	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_6)
+	variable temp: integer;
+	begin
+	 if (state="001101" or state="011001") then
+	 temp := to_integer(unsigned(t1)) + to_integer(unsigned(t2));
+	 t3 <= std_logic_vector(to_unsigned(temp,16));
+	 elsif(state="000101") then
+		t3 <= t1 nand t2;
+	 end if; 
+	end process;
+end working;
