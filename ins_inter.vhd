@@ -1,0 +1,69 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ins_setter is
+port(   reset,clock:in std_logic;
+        next_state: in std_logic_vector(5 downto 0);
+		  state: out std_logic_vector(5 downto 0);
+		  );
+end ins_decoder;
+
+architecture working of ins_setter is
+begin
+
+clock_proc:process(clock,reset)
+begin
+    if(clock='1' and clock' event) then
+        if(reset='1') then
+            state<="000000";
+        else
+            state<=next_state;
+        end if;
+    end if;
+    
+end process;
+
+end working
+
+
+entity ins_decoder is
+port(
+        next_state: out std_logic_vector(5 downto 0);
+		  state: in std_logic_vector(5 downto 0);
+		  op_code: in std_logic_vector(4 downto 0);
+		  cz: in std_logic_vector(1 downto 0);
+		  );
+end ins_decoder;
+
+architecture working of ins_decoder is
+begin
+next_state_process: process(state, next_state)
+begin
+	case state is
+	when "000000"=>
+		if (op_code="0001") then
+			next_state <= "000001";
+	when "000001"=>
+		if (op_code="0001") then
+			next_state <= "000002";
+	when "000002"=>
+		if (op_code="0001") then
+			next_state <= "000003";
+	when "000003"=>
+		if (op_code="0001") then
+			next_state <= "000004";
+	when "000004"=>
+		if (op_code="0001") then
+			next_state <= "00000";
+	end case
+end process
+
+
+end working
+
+
+
+
+
