@@ -32,7 +32,6 @@ begin
 					
 	stateSet_instance: stateSet
 		port_map (
-		
 		));
 
 end DutWrap;
