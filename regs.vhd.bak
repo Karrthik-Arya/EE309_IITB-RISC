@@ -1,0 +1,11 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity regs is 
+	port (reg_adr: in std_logic_vector(2 downto 0);
+			data_in: in std_logic_vector(15 downto 0);
+			data_out: out std_logic_vector(15 downto 0);
+	)

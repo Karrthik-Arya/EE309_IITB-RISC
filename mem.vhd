@@ -26,7 +26,7 @@ architecture working of mem is
 	
 	mem_action: process(clk)
 	begin
-	if (rising_edge(clk)) then
+	if (falling_edge(clk)) then
 	 if (state="001101" or state="011001") then
 	 ram_data(to_integer(unsigned(addr)) <= data_1;
 	 end if;
