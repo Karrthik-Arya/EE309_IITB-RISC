@@ -8,7 +8,8 @@ entity pc is
 	port (alu_c: in std_logic_vector(15 downto 0);
 			alu_a: out std_logic_vector(15 downto 0);
 			state: in std_logic_vector(5 downto 0);
-			clk: in std_logic
+			clk: in std_logic;
+			adr: out std_logic_vector(15 downto 0);
 	);
 	end entity;
 	

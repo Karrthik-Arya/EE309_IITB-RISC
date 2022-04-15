@@ -7,7 +7,6 @@ entity mem is
 	 state: in std_logic_vector(5 downto 0);
 	 data_1: in std_logic_vector(15 downto 0);
 	 data_2: out std_logic_vector(15 downto 0);
-	 ir_adr: in std_logic_vector(15 downto 0);
 	 ir_data: out std_logic_vector(15 downto 0);
 	 clk : in std_logic
 	 );
@@ -44,7 +43,7 @@ architecture working of mem is
 	end if;
 	end process;
 	data_2 <= mem_data(to_integer(unsigned(addr)));
-	ir_data <= mem_ins(to_integer(unsigned(ir_adr)));
+	ir_data <= mem_ins(to_integer(unsigned(addr));
 end working;
 	
 	
