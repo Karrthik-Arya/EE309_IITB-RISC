@@ -2,10 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 library work;
 use ieee.numeric_std.all;
-use work.Adder_4Bit.all;
-use work.Gates.all;
 
-entity alu(
+entity alu is
 	port(state: in std_logic_vector(5 downto 0);
 	 t1: in std_logic_vector(15 downto 0);
 	 t2: in std_logic_vector(15 downto 0);
@@ -13,9 +11,8 @@ entity alu(
 	 one_bit_shifter: in std_logic_vector(15 downto 0);
 	 sign_extender_10: in std_logic_vector(15 downto 0);
 	 sign_extender_6: in std_logic_vector(15 downto 0);
-	 state: in std_logic_vector(5 downto 0);
 	 t3: out std_logic_vector(15 downto 0);
-	 pc_out: out std_logic_vector(15 downto 0);
+	 pc_out: out std_logic_vector(15 downto 0)
 	 );
 	 end entity;
 	 
@@ -36,9 +33,9 @@ begin
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));
 		end if;
-	elsif () then
+	elsif (state="001101") then
 		 --adi
-		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(sign_extender_10);
+		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(sign_extender_10));
 		 if (temp>65535) then
 			carry <= '1';
 			t3 <= std_logic_vector(to_unsigned(temp-65535,16));
@@ -46,9 +43,9 @@ begin
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));
 		end if;
-	elsif () then
+	elsif (state="001101") then
 		 --adl
-		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(one_bit_shifter);
+		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(one_bit_shifter));
 		 if (temp>65535) then
 			carry <= '1';
 			t3 <= std_logic_vector(to_unsigned(temp-65535,16));
@@ -56,9 +53,9 @@ begin
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));
 		end if;
-	elsif() then
+	elsif(state="001101") then
 		--adc
-		if (carry) then
+		if (carry='1') then
 			temp := to_integer(unsigned(t1)) + to_integer(unsigned(t2));
 			 if (temp>65535) then
 				carry <= '1';
@@ -68,9 +65,9 @@ begin
 				t3 <= std_logic_vector(to_unsigned(temp,16));
 			end if;
 		end if;
-	elsif() then
+	elsif(state="001101") then
 		--adz
-		if (zero) then
+		if (zero='1') then
 			temp := to_integer(unsigned(t1)) + to_integer(unsigned(t2));
 			 if (temp>65535) then
 				carry <= '1';
@@ -80,42 +77,41 @@ begin
 				t3 <= std_logic_vector(to_unsigned(temp,16));
 			end if;
 		end if;
-	elsif() then
+	elsif(state="001101") then
 	--pc
 		temp := to_integer(unsigned(pc_in)) + 1;
 		t3 <= std_logic_vector(to_unsigned(temp,16));
-	elsif() then
+	elsif(state="001101") then
 		--ndc
-		if(carry) then
+		if(carry='1') then
 			t3 <= t1 nand t2;
-			if (t3= x"0000") then
+			if ((t1 nand t2)= x"0000") then
 			zero <= '0';
 			end if;
 		end if;
-	elsif(state="000101") then
+	elsif(state="000101" and zero='1') then
 		--ndu
-		if(zero) then
 			t3 <= t1 nand t2;
-			if (t3= x"0000") then
+			if ((t1 nand t2)= x"0000") then
 			zero <= '0';
 			end if;
-		end if;
 	elsif(state="000101") then
 		--nand
 		t3 <= t1 nand t2;
-		if (t3= x"0000") then
+		if ((t1 nand t2)= x"0000") then
 			zero <= '0';
 		end if;
-	elsif() then
+	elsif(state="001101") then
 		--cmp
 		if (t1 = t2) then
 			zero <= '1';
 		else
 			zero<= '0';
 	end if; 
-	elsif() then
+	elsif(state="001101") then
 	--pc-1
 		temp := to_integer(unsigned(pc_in)) -1;
-		t3 <= std_logic_vector(to_unsigned(temp,16);
+		t3 <= std_logic_vector(to_unsigned(temp,16));
+	end if;
 	end process;
 end working;

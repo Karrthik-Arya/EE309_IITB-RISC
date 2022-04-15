@@ -11,7 +11,8 @@ entity ir is
 		sign_ex: out std_logic_vector(5 downto 0);
 		mem: in std_logic_vector(15 downto 0);
 		clk: in std_logic;
-	) 
+		state: in std_logic_vector(5 downto 0)
+	) ;
 end ir;
 
 architecture working of ir is
@@ -20,7 +21,7 @@ begin
 	write_proc: process(clk)
 	begin
 	if(falling_edge(clk)) then
-		if() then
+		if(state="000000") then
 			ir_store <= mem;
 	end if;
 	end if;
@@ -28,21 +29,22 @@ begin
 	
 	read_proc: process(ir_store)
 	begin
-	if() then
-		reg_1<= ir(11 downto 9);
-		reg_2<= ir(8 downto 6);
-	elsif() then
-		reg_3 <= ir(8 downto 6);
-	elsif() then	
-		reg_3 <= ir(5 downto 3);
-	elsif() then
-		shift7 <= ir(8 downto 0);
-	elsif() then
-		sign_ex <= ir(5 downto 0);
-	elsif() then
-		reg_3 <= ir(11 downto 9);
-	elsif() then
-		reg_1 <= ir(8 downto 6);
+	if(state="000000") then
+		reg_1<= ir_store(11 downto 9);
+		reg_2<= ir_store(8 downto 6);
+	elsif(state="000000") then
+		reg_3 <= ir_store(8 downto 6);
+	elsif(state="000000") then	
+		reg_3 <= ir_store(5 downto 3);
+	elsif(state="000000") then
+		shift7 <= ir_store(8 downto 0);
+	elsif(state="000000") then
+		sign_ex <= ir_store(5 downto 0);
+	elsif(state="000000") then
+		reg_3 <= ir_store(11 downto 9);
+	elsif(state="000000") then
+		reg_1 <= ir_store(8 downto 6);
 	end if;
 	end process;
 
+end working;

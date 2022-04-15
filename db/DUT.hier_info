@@ -1,0 +1,80 @@
+|DUT
+input_vector[0] => ins_decoder:stateTrans_instance.cz[0]
+input_vector[1] => ins_decoder:stateTrans_instance.cz[1]
+input_vector[2] => ~NO_FANOUT~
+input_vector[3] => ~NO_FANOUT~
+input_vector[4] => ~NO_FANOUT~
+input_vector[5] => ~NO_FANOUT~
+input_vector[6] => ~NO_FANOUT~
+input_vector[7] => ~NO_FANOUT~
+input_vector[8] => ~NO_FANOUT~
+input_vector[9] => ~NO_FANOUT~
+input_vector[10] => ~NO_FANOUT~
+input_vector[11] => ins_decoder:stateTrans_instance.op_code[0]
+input_vector[12] => ins_decoder:stateTrans_instance.op_code[1]
+input_vector[13] => ins_decoder:stateTrans_instance.op_code[2]
+input_vector[14] => ins_decoder:stateTrans_instance.op_code[3]
+input_vector[15] => ins_decoder:stateTrans_instance.op_code[4]
+output_vector[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+output_vector[1] << output_vector[1].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[2] << output_vector[2].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[3] << output_vector[3].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[4] << output_vector[4].DB_MAX_OUTPUT_PORT_TYPE
+output_vector[5] << output_vector[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ins_decoder:stateTrans_instance
+next_state[0] <= next_state[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_state[1] <= next_state[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_state[2] <= next_state[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_state[3] <= next_state[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_state[4] <= next_state[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_state[5] <= next_state[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+state[0] => Mux0.IN69
+state[0] => Mux1.IN69
+state[1] => Mux0.IN68
+state[1] => Mux1.IN68
+state[2] => Mux0.IN67
+state[2] => Mux1.IN67
+state[3] => Mux0.IN66
+state[3] => Mux1.IN66
+state[4] => Mux0.IN65
+state[4] => Mux1.IN65
+state[5] => Mux0.IN64
+state[5] => Mux1.IN64
+op_code[0] => ~NO_FANOUT~
+op_code[1] => ~NO_FANOUT~
+op_code[2] => ~NO_FANOUT~
+op_code[3] => ~NO_FANOUT~
+op_code[4] => ~NO_FANOUT~
+cz[0] => ~NO_FANOUT~
+cz[1] => ~NO_FANOUT~
+
+
+|DUT|ins_setter:stateSet_instance
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+clock => state[2]~reg0.CLK
+clock => state[3]~reg0.CLK
+clock => state[4]~reg0.CLK
+clock => state[5]~reg0.CLK
+next_state[0] => state.DATAA
+next_state[1] => state.DATAA
+next_state[2] => state.DATAA
+next_state[3] => state.DATAA
+next_state[4] => state.DATAA
+next_state[5] => state.DATAA
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[4] <= state[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[5] <= state[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

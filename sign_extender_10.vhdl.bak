@@ -2,12 +2,13 @@ library ieee;
 use ieee.std_logic_1164.all;
 library work;
 use ieee.numeric_std.all;
+use work.Adder_4Bit.all;
+use work.Gates.all;
 
-
-entity sign_extender_10_component is
+entity sign_extender_10_component(
 	port(ir_5_0: in std_logic_vector(5 downto 0);
 	 alu: out std_logic_vector(15 downto 0);
-	 state: in std_logic_vector(5 downto 0)
+	 state: in std_logic_vector(5 downto 0);
 	 );
 end entity;
 	 
@@ -16,7 +17,7 @@ begin
 	process(ir_5_0)
 	variable temp: integer;
 	begin
-	 if (state="000000") then
+	 if (add states) then
 		 temp := to_integer(unsigned(ir_5_0));
 		 alu <= std_logic_vector(to_unsigned(temp, 16));
 		end if;

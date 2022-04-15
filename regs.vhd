@@ -16,6 +16,7 @@ entity registers is
 			pc_in: in std_logic_vector(15 downto 0);
 			pc_out: out std_logic_vector(15 downto 0);
 			clk: in std_logic;
+			state: in std_logic_vector(5 downto 0)
 	);
 	end entity;
 	
@@ -23,7 +24,7 @@ architecture working of registers is
 type mem_array is array (0 to 7 ) of std_logic_vector (15 downto 0);
 signal regs: mem_array :=(
    x"0000",x"0000", x"0000", x"0000",
-	x"0000",x"0000", x"0000", x"0000",
+	x"0000",x"0000", x"0000", x"0000"
    ); 
 begin
 
