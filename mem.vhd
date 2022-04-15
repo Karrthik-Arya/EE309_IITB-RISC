@@ -5,7 +5,9 @@ use ieee.numeric_std.all;
 entity mem is
 	port( addr: in std_logic_vector(15 downto 0);
 	 state: in std_logic_vector(5 downto 0);
-	 data_1: in std_logic_vector(15 downto 0);
+	 t1: in std_logic_vector(15 downto 0);
+	 t2: in std_logic_vector(15 downto 0);
+	 t3: in std_logic_vector(15 downto 0);
 	 data_2: out std_logic_vector(15 downto 0);
 	 ir_data: out std_logic_vector(15 downto 0);
 	 clk : in std_logic

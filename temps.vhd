@@ -10,7 +10,8 @@ entity temp_1 is
 		clk: in std_logic;
 		data_1: out std_logic_vector(15 downto 0);
 		data_2: in std_logic_vector(15 downto 0);
-		state: in std_logic_vector(5 downto 0)
+		state: in std_logic_vector(5 downto 0);
+		t1: in std_logic_vector(15 downto 0);
 	);
 end temp_1;
 

@@ -6,11 +6,12 @@ use ieee.numeric_std.all;
 entity alu is
 	port(state: in std_logic_vector(5 downto 0);
 	 t1: in std_logic_vector(15 downto 0);
+	 t1_out: out std_logic_vector(15 downto 0);
 	 t2: in std_logic_vector(15 downto 0);
 	 pc_in: in std_logic_vector(15 downto 0);
 	 one_bit_shifter: in std_logic_vector(15 downto 0);
 	 sign_extender_10: in std_logic_vector(15 downto 0);
-	 sign_extender_6: in std_logic_vector(15 downto 0);
+	 sign_extender_7: in std_logic_vector(15 downto 0);
 	 t3: out std_logic_vector(15 downto 0);
 	 pc_out: out std_logic_vector(15 downto 0)
 	 );
