@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sat Apr 16 05:50:23 2022
+Sat Apr 16 11:58:22 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Apr 16 05:50:23 2022       ;
+; Analysis & Synthesis Status ; Successful - Sat Apr 16 11:58:22 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
@@ -221,7 +221,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 05:50:14 2022
+    Info: Processing started: Sat Apr 16 11:58:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iitb-risc -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -269,7 +269,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12023): Found entity 1: ir File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 5
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at DUT.vhd(12): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 12
-Info (12128): Elaborating entity "ins_decoder" for hierarchy "ins_decoder:stateTrans_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 171
+Info (12128): Elaborating entity "ins_decoder" for hierarchy "ins_decoder:stateTrans_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 167
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(48): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 48
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(52): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 52
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(56): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 56
@@ -280,16 +280,8 @@ Info (10041): Inferred latch for "next_state[2]" at ins_inter.vhd(44) File: /hom
 Info (10041): Inferred latch for "next_state[3]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
 Info (10041): Inferred latch for "next_state[4]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
 Info (10041): Inferred latch for "next_state[5]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (12128): Elaborating entity "ins_setter" for hierarchy "ins_setter:stateSet_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 179
-Info (12128): Elaborating entity "ir" for hierarchy "ir:ir_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 187
-Warning (10492): VHDL Process Statement warning at ir.vhd(32): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 32
-Warning (10492): VHDL Process Statement warning at ir.vhd(35): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at ir.vhd(38): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at ir.vhd(40): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at ir.vhd(42): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 42
-Warning (10492): VHDL Process Statement warning at ir.vhd(44): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 44
-Warning (10492): VHDL Process Statement warning at ir.vhd(46): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 46
-Warning (10492): VHDL Process Statement warning at ir.vhd(48): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 48
+Info (12128): Elaborating entity "ins_setter" for hierarchy "ins_setter:stateSet_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 175
+Info (12128): Elaborating entity "ir" for hierarchy "ir:ir_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 183
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "shift7", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
@@ -319,9 +311,9 @@ Info (10041): Inferred latch for "shift7[5]" at ir.vhd(30) File: /home/winston/D
 Info (10041): Inferred latch for "shift7[6]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Info (10041): Inferred latch for "shift7[7]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Info (10041): Inferred latch for "shift7[8]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 199
+Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 195
 Warning (10492): VHDL Process Statement warning at mem.vhd(43): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 43
-Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 211
+Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 207
 Warning (10541): VHDL Signal Declaration warning at regs.vhd(17): used implicit default value for signal "pc_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 17
 Warning (10492): VHDL Process Statement warning at regs.vhd(33): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 33
 Warning (10492): VHDL Process Statement warning at regs.vhd(34): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 34
@@ -360,7 +352,7 @@ Info (10041): Inferred latch for "t1[12]" at regs.vhd(31) File: /home/winston/Do
 Info (10041): Inferred latch for "t1[13]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
 Info (10041): Inferred latch for "t1[14]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
 Info (10041): Inferred latch for "t1[15]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (12128): Elaborating entity "temp_1" for hierarchy "temp_1:t1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 227
+Info (12128): Elaborating entity "temp_1" for hierarchy "temp_1:t1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 223
 Warning (10492): VHDL Process Statement warning at temps.vhd(23): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at temps.vhd(26): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 26
 Warning (10631): VHDL Process Statement warning at temps.vhd(21): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
@@ -397,7 +389,7 @@ Info (10041): Inferred latch for "alu[12]" at temps.vhd(21) File: /home/winston/
 Info (10041): Inferred latch for "alu[13]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
 Info (10041): Inferred latch for "alu[14]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
 Info (10041): Inferred latch for "alu[15]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (12128): Elaborating entity "temp_2" for hierarchy "temp_2:t2_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 239
+Info (12128): Elaborating entity "temp_2" for hierarchy "temp_2:t2_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 235
 Warning (10541): VHDL Signal Declaration warning at temps.vhd(57): used implicit default value for signal "shift1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 57
 Warning (10492): VHDL Process Statement warning at temps.vhd(66): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 66
 Warning (10492): VHDL Process Statement warning at temps.vhd(69): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 69
@@ -453,7 +445,7 @@ Info (10041): Inferred latch for "alu[12]" at temps.vhd(64) File: /home/winston/
 Info (10041): Inferred latch for "alu[13]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
 Info (10041): Inferred latch for "alu[14]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
 Info (10041): Inferred latch for "alu[15]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (12128): Elaborating entity "temp_3" for hierarchy "temp_3:t3_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 251
+Info (12128): Elaborating entity "temp_3" for hierarchy "temp_3:t3_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 247
 Warning (10492): VHDL Process Statement warning at temps.vhd(111): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 111
 Warning (10492): VHDL Process Statement warning at temps.vhd(114): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 114
 Warning (10631): VHDL Process Statement warning at temps.vhd(109): inferring latch(es) for signal or variable "reg", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
@@ -490,7 +482,7 @@ Info (10041): Inferred latch for "reg[12]" at temps.vhd(109) File: /home/winston
 Info (10041): Inferred latch for "reg[13]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
 Info (10041): Inferred latch for "reg[14]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
 Info (10041): Inferred latch for "reg[15]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 260
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 256
 Warning (10541): VHDL Signal Declaration warning at alu.vhd(9): used implicit default value for signal "t1_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 9
 Warning (10541): VHDL Signal Declaration warning at alu.vhd(16): used implicit default value for signal "pc_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 16
 Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 27
@@ -529,7 +521,7 @@ Info (10041): Inferred latch for "t3[13]" at alu.vhd(24) File: /home/winston/Doc
 Info (10041): Inferred latch for "t3[14]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
 Info (10041): Inferred latch for "t3[15]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
 Info (10041): Inferred latch for "carry" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 274
+Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 270
 Warning (10541): VHDL Signal Declaration warning at pc.vhdl(10): used implicit default value for signal "alu_a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 10
 Warning (10541): VHDL Signal Declaration warning at pc.vhdl(12): used implicit default value for signal "reg_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 12
 Warning (10492): VHDL Process Statement warning at pc.vhdl(25): signal "pc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 25
@@ -550,7 +542,7 @@ Info (10041): Inferred latch for "data_1[12]" at pc.vhdl(22) File: /home/winston
 Info (10041): Inferred latch for "data_1[13]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Info (10041): Inferred latch for "data_1[14]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Info (10041): Inferred latch for "data_1[15]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (12128): Elaborating entity "shifter_1" for hierarchy "shifter_1:shift1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 285
+Info (12128): Elaborating entity "shifter_1" for hierarchy "shifter_1:shift1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 281
 Warning (10492): VHDL Process Statement warning at shifter_1.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 19
 Warning (10631): VHDL Process Statement warning at shifter_1.vhdl(16): inferring latch(es) for signal or variable "alu_a", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[0]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
@@ -569,7 +561,7 @@ Info (10041): Inferred latch for "alu_a[12]" at shifter_1.vhdl(16) File: /home/w
 Info (10041): Inferred latch for "alu_a[13]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[14]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[15]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (12128): Elaborating entity "shifter_7" for hierarchy "shifter_7:shift7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 292
+Info (12128): Elaborating entity "shifter_7" for hierarchy "shifter_7:shift7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 288
 Warning (10492): VHDL Process Statement warning at shifter_7.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 19
 Warning (10631): VHDL Process Statement warning at shifter_7.vhdl(16): inferring latch(es) for signal or variable "rf_d3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[0]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
@@ -588,7 +580,7 @@ Info (10041): Inferred latch for "rf_d3[12]" at shifter_7.vhdl(16) File: /home/w
 Info (10041): Inferred latch for "rf_d3[13]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[14]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[15]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_10_component" for hierarchy "sign_extender_10_component:sign_ex10_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 299
+Info (12128): Elaborating entity "sign_extender_10_component" for hierarchy "sign_extender_10_component:sign_ex10_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 295
 Warning (10492): VHDL Process Statement warning at sign_extender_10.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 19
 Warning (10631): VHDL Process Statement warning at sign_extender_10.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[0]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
@@ -607,7 +599,7 @@ Info (10041): Inferred latch for "alu[12]" at sign_extender_10.vhdl(16) File: /h
 Info (10041): Inferred latch for "alu[13]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[14]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[15]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_7_component" for hierarchy "sign_extender_7_component:sign_ex7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 306
+Info (12128): Elaborating entity "sign_extender_7_component" for hierarchy "sign_extender_7_component:sign_ex7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 302
 Warning (10631): VHDL Process Statement warning at sign_extender_7.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[0]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[1]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
@@ -632,10 +624,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 398 megabytes
-    Info: Processing ended: Sat Apr 16 05:50:23 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 401 megabytes
+    Info: Processing ended: Sat Apr 16 11:58:22 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:38
 
 

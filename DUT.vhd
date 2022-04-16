@@ -163,10 +163,6 @@ component alu is
 	 );
 	 end component;
 begin
-
-   -- input/output vector element ordering is critical,
-   -- and must match the ordering in the trace file
-	clk<= input_vector(0);
 	output_vector<="0";
    stateTrans_instance: ins_decoder
 			port map (
@@ -178,7 +174,7 @@ begin
 					
 	stateSet_instance: ins_setter
 		port map (
-			clock => clk,
+			clock => input_vector(0),
 			next_state => next_state,
 			state => state,
 			reset => reset
@@ -186,7 +182,7 @@ begin
 		
 		ir_instance: ir
 			port map(
-			clk => clk,
+			clk => input_vector(0),
 			state => state,
 			mem => curr_ins,
 			shift7 => w4,
@@ -199,7 +195,7 @@ begin
 		mem_instance: mem
 			port map(
 				state => state,
-				clk => clk,
+				clk => input_vector(0),
 				t1 => w_din_t1,
 				t2 => w_din_t2,
 				t3 => w_din_t3,
@@ -214,7 +210,7 @@ begin
 					reg_a2 => w2,
 					reg_a3 => w3,
 					state => state,
-					clk => clk,
+					clk => input_vector(0),
 					pc_in => w_pc_reg,
 					shift7 => w_shift7_reg,
 					t3 => w_t3_in,
@@ -227,7 +223,7 @@ begin
 			t1_instance: temp_1
 				port map (
 					state => state,
-					clk => clk,
+					clk => input_vector(0),
 					reg => w_t1,
 					data_2 => w_dout,
 					alu_in => w_alu_t1,
@@ -239,7 +235,7 @@ begin
 				t2_instance: temp_2
 					port map (
 						state => state,
-						clk => clk,
+						clk => input_vector(0),
 						data_2 => w_dout,
 						reg_in => w_t2,
 						reg_out => w_t2_in,
@@ -251,7 +247,7 @@ begin
 				t3_instance: temp_3
 					port map(
 						state=> state,
-						clk => clk,
+						clk => input_vector(0),
 						alu => w_alu_t3,
 						reg => w_t3_in,
 						data_1 => w_din_t3
@@ -274,7 +270,7 @@ begin
 				pc_instance: pc
 					port map (
 					state=> state,
-					clk => clk,
+					clk => input_vector(0),
 					alu_c => w_alu_pcout,
 					reg=> w_pcout_reg,
 					reg_out => w_pc_reg,

@@ -54,8 +54,10 @@ begin
 		end if;
 	when "000111"=>
 		if (op_code="0011") then
-			next_state <= "000001";
+			next_state <= "111111";
 		end if;
+	when "111111"=>
+		next_state<= state;
 	when others =>
 		next_state<="000000";
 	end case;

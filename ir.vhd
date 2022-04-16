@@ -27,7 +27,7 @@ begin
 	end if;
 	end process;
 	
-	read_proc: process(ir_store)
+	read_proc: process(ir_store, state)
 	begin
 	if(state="000111") then
 		shift7<=ir_store(8 downto 0);
