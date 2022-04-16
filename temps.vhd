@@ -22,7 +22,7 @@ signal t1: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t1, state)
 	begin
-		if (state="000011" or state="000110" or state="001100" or state="010000" or state="100101" or state="101000") then
+		if (state="000011" or state="101001" or state="000101" or state="000110" or state="001100" or state="010000" or state="100101" or state="101000") then
 		alu <= t1;
 
 		elsif (state="001101") then
@@ -71,7 +71,7 @@ signal t2: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t2, state)
 	begin
-		if (state="000011" or state="101000") then
+		if (state="000011" or state="101000" or state="101001") then
 		alu <= t2;
 
 		elsif (state="000101") then
@@ -130,7 +130,7 @@ begin
 	write_proc: process(clk)
 	begin 
 		if(falling_edge(clk)) then
-		if (state="000011"or state="000101" or state="000110" or state="001100" or state="101000") then
+		if (state="000011"or state="000101" or state="000110" or state="001100" or state="101000" or state="101001") then
 			t3 <= alu;	
 		end if;
 		end if;

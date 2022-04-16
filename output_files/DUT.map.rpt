@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sun Apr 17 02:38:30 2022
+Sun Apr 17 04:34:32 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Apr 17 02:38:30 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 04:34:32 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
@@ -208,251 +208,238 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+---------------------------------------------+
 ; Register name                            ; Reason for Removal                          ;
 +------------------------------------------+---------------------------------------------+
+; ir:ir_instance|ir_store[0..11]           ; Stuck at GND due to stuck port data_in      ;
 ; ins_setter:stateSet_instance|state[0..5] ; Stuck at GND due to stuck port data_in      ;
-; ir:ir_instance|ir_store[0..11]           ; Stuck at GND due to stuck port clock_enable ;
 ; temp_3:t3_instance|t3[5..15]             ; Lost fanout                                 ;
 ; pc:pc_instance|pc[5..15]                 ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][9]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[1][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][9]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[3][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][9]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[5][9]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][9]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][9]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[6][9]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[7][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][10]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][13]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][11]       ; Lost fanout                                 ;
 ; registers:reg_instance|regs[1][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][10]       ; Lost fanout                                 ;
 ; registers:reg_instance|regs[3][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][10]       ; Lost fanout                                 ;
 ; registers:reg_instance|regs[5][10]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][10]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][10]       ; Lost fanout                                 ;
 ; registers:reg_instance|regs[6][10]       ; Lost fanout                                 ;
 ; registers:reg_instance|regs[7][10]       ; Lost fanout                                 ;
-; pc:pc_instance|pc[0]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][0]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[1]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[1][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][1]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[2]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][2]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[3]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][3]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[4]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][4]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][5]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[1][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][4]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[3][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][4]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[5][4]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][4]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][4]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[6][4]        ; Lost fanout                                 ;
 ; registers:reg_instance|regs[7][4]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][3]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][2]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][1]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[1][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[3][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[5][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[2][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[4][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[6][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[7][0]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][7]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][6]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][5]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][8]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][9]        ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][10]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][11]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][12]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][15]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][14]       ; Lost fanout                                 ;
+; registers:reg_instance|regs[0][13]       ; Lost fanout                                 ;
+; pc:pc_instance|pc[0]                     ; Stuck at GND due to stuck port clock_enable ;
+; registers:reg_instance|regs[0][0]        ; Lost fanout                                 ;
+; pc:pc_instance|pc[1]                     ; Stuck at GND due to stuck port clock_enable ;
+; registers:reg_instance|regs[0][1]        ; Lost fanout                                 ;
+; pc:pc_instance|pc[2]                     ; Stuck at GND due to stuck port clock_enable ;
+; registers:reg_instance|regs[0][2]        ; Lost fanout                                 ;
+; pc:pc_instance|pc[3]                     ; Stuck at GND due to stuck port clock_enable ;
+; registers:reg_instance|regs[0][3]        ; Lost fanout                                 ;
+; pc:pc_instance|pc[4]                     ; Stuck at GND due to stuck port clock_enable ;
+; registers:reg_instance|regs[0][4]        ; Lost fanout                                 ;
 ; temp_1:t1_instance|t1[5..15]             ; Lost fanout                                 ;
 ; temp_2:t2_instance|t2[0..15]             ; Stuck at GND due to stuck port clock_enable ;
 ; temp_1:t1_instance|t1[0..4]              ; Lost fanout                                 ;
 ; temp_3:t3_instance|t3[0..4]              ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][1]        ; Lost fanout                                 ;
 ; Total Number of Removed Registers = 210  ;                                             ;
 +------------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                               ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; Register name                         ; Reason for Removal             ; Registers Removed due to This Register                                           ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; ir:ir_instance|ir_store[8]            ; Stuck at GND                   ; temp_3:t3_instance|t3[15], registers:reg_instance|regs[0][15],                   ;
-;                                       ; due to stuck port clock_enable ; registers:reg_instance|regs[1][15], registers:reg_instance|regs[2][15],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][15], registers:reg_instance|regs[4][15],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][15], registers:reg_instance|regs[6][15],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][15], registers:reg_instance|regs[0][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][14], registers:reg_instance|regs[2][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][14], registers:reg_instance|regs[4][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][14], registers:reg_instance|regs[6][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][14], registers:reg_instance|regs[0][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][13], registers:reg_instance|regs[2][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][13], registers:reg_instance|regs[4][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][13], registers:reg_instance|regs[6][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][13], registers:reg_instance|regs[0][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][12], registers:reg_instance|regs[2][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][12], registers:reg_instance|regs[4][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][12], registers:reg_instance|regs[6][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][12], registers:reg_instance|regs[0][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][11], registers:reg_instance|regs[2][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][11], registers:reg_instance|regs[4][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][11], registers:reg_instance|regs[6][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][11], registers:reg_instance|regs[0][9],           ;
-;                                       ;                                ; registers:reg_instance|regs[1][9], registers:reg_instance|regs[2][9],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][9], registers:reg_instance|regs[4][9],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][9], registers:reg_instance|regs[6][9],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][9], registers:reg_instance|regs[0][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][8], registers:reg_instance|regs[2][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][8], registers:reg_instance|regs[4][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][8], registers:reg_instance|regs[6][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][8], registers:reg_instance|regs[0][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][7], registers:reg_instance|regs[2][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][7], registers:reg_instance|regs[4][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][7], registers:reg_instance|regs[6][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][7], registers:reg_instance|regs[0][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][6], registers:reg_instance|regs[2][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][6], registers:reg_instance|regs[4][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][6], registers:reg_instance|regs[6][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][6], registers:reg_instance|regs[0][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][5], registers:reg_instance|regs[2][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][5], registers:reg_instance|regs[4][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][5], registers:reg_instance|regs[6][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][5], registers:reg_instance|regs[0][10],           ;
-;                                       ;                                ; registers:reg_instance|regs[1][10], registers:reg_instance|regs[2][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][10], registers:reg_instance|regs[4][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][10], registers:reg_instance|regs[6][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][10], registers:reg_instance|regs[0][0],           ;
-;                                       ;                                ; registers:reg_instance|regs[2][0], registers:reg_instance|regs[3][0],            ;
-;                                       ;                                ; registers:reg_instance|regs[4][0], registers:reg_instance|regs[5][0],            ;
-;                                       ;                                ; registers:reg_instance|regs[6][0], registers:reg_instance|regs[7][0],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][1], registers:reg_instance|regs[2][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][1], registers:reg_instance|regs[4][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][1], registers:reg_instance|regs[6][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][1], registers:reg_instance|regs[0][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][2], registers:reg_instance|regs[2][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][2], registers:reg_instance|regs[4][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][2], registers:reg_instance|regs[6][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][2], registers:reg_instance|regs[0][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][3], registers:reg_instance|regs[2][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][3], registers:reg_instance|regs[4][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][3], registers:reg_instance|regs[6][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][3], registers:reg_instance|regs[0][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][4], registers:reg_instance|regs[2][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][4], registers:reg_instance|regs[4][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][4], registers:reg_instance|regs[6][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][4], temp_2:t2_instance|t2[14],                    ;
-;                                       ;                                ; temp_2:t2_instance|t2[13], temp_2:t2_instance|t2[12], temp_2:t2_instance|t2[9],  ;
-;                                       ;                                ; temp_2:t2_instance|t2[8], temp_2:t2_instance|t2[7], temp_2:t2_instance|t2[6],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[5], temp_2:t2_instance|t2[4], temp_2:t2_instance|t2[3],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[2], temp_2:t2_instance|t2[1], temp_2:t2_instance|t2[0],    ;
-;                                       ;                                ; registers:reg_instance|regs[1][0], registers:reg_instance|regs[0][1]             ;
-; ins_setter:stateSet_instance|state[0] ; Stuck at GND                   ; temp_3:t3_instance|t3[12], temp_3:t3_instance|t3[11], temp_3:t3_instance|t3[10], ;
-;                                       ; due to stuck port data_in      ; temp_3:t3_instance|t3[9], temp_3:t3_instance|t3[8], temp_3:t3_instance|t3[7],    ;
-;                                       ;                                ; temp_3:t3_instance|t3[6], temp_3:t3_instance|t3[5], pc:pc_instance|pc[6],        ;
-;                                       ;                                ; pc:pc_instance|pc[5], temp_1:t1_instance|t1[15], temp_1:t1_instance|t1[14],      ;
-;                                       ;                                ; temp_1:t1_instance|t1[13], temp_1:t1_instance|t1[12], temp_1:t1_instance|t1[11], ;
-;                                       ;                                ; temp_1:t1_instance|t1[10], temp_1:t1_instance|t1[9], temp_1:t1_instance|t1[8],   ;
-;                                       ;                                ; temp_1:t1_instance|t1[7], temp_1:t1_instance|t1[6], temp_1:t1_instance|t1[5],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[15], temp_2:t2_instance|t2[11], temp_2:t2_instance|t2[10], ;
-;                                       ;                                ; temp_1:t1_instance|t1[0], temp_1:t1_instance|t1[1], temp_1:t1_instance|t1[2],    ;
-;                                       ;                                ; temp_1:t1_instance|t1[3], temp_1:t1_instance|t1[4], temp_3:t3_instance|t3[2],    ;
-;                                       ;                                ; temp_3:t3_instance|t3[3], temp_3:t3_instance|t3[4]                               ;
-; ir:ir_instance|ir_store[6]            ; Stuck at GND                   ; temp_3:t3_instance|t3[13], pc:pc_instance|pc[0], temp_3:t3_instance|t3[0]        ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[5]            ; Stuck at GND                   ; pc:pc_instance|pc[12], pc:pc_instance|pc[11]                                     ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[7]            ; Stuck at GND                   ; temp_3:t3_instance|t3[14]                                                        ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[3]            ; Stuck at GND                   ; pc:pc_instance|pc[10]                                                            ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[2]            ; Stuck at GND                   ; pc:pc_instance|pc[9]                                                             ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[1]            ; Stuck at GND                   ; pc:pc_instance|pc[8]                                                             ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[0]            ; Stuck at GND                   ; pc:pc_instance|pc[7]                                                             ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++---------------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++---------------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; ir:ir_instance|ir_store[8]            ; Stuck at GND              ; temp_3:t3_instance|t3[15], registers:reg_instance|regs[1][9],                    ;
+;                                       ; due to stuck port data_in ; registers:reg_instance|regs[3][9], registers:reg_instance|regs[2][9],            ;
+;                                       ;                           ; registers:reg_instance|regs[4][9], registers:reg_instance|regs[7][9],            ;
+;                                       ;                           ; registers:reg_instance|regs[1][15], registers:reg_instance|regs[3][15],          ;
+;                                       ;                           ; registers:reg_instance|regs[2][15], registers:reg_instance|regs[4][15],          ;
+;                                       ;                           ; registers:reg_instance|regs[7][15], registers:reg_instance|regs[1][14],          ;
+;                                       ;                           ; registers:reg_instance|regs[3][14], registers:reg_instance|regs[2][14],          ;
+;                                       ;                           ; registers:reg_instance|regs[4][14], registers:reg_instance|regs[7][14],          ;
+;                                       ;                           ; registers:reg_instance|regs[1][13], registers:reg_instance|regs[3][13],          ;
+;                                       ;                           ; registers:reg_instance|regs[2][13], registers:reg_instance|regs[4][13],          ;
+;                                       ;                           ; registers:reg_instance|regs[7][13], registers:reg_instance|regs[1][12],          ;
+;                                       ;                           ; registers:reg_instance|regs[3][12], registers:reg_instance|regs[2][12],          ;
+;                                       ;                           ; registers:reg_instance|regs[4][12], registers:reg_instance|regs[7][12],          ;
+;                                       ;                           ; registers:reg_instance|regs[1][11], registers:reg_instance|regs[3][11],          ;
+;                                       ;                           ; registers:reg_instance|regs[2][11], registers:reg_instance|regs[4][11],          ;
+;                                       ;                           ; registers:reg_instance|regs[7][11], registers:reg_instance|regs[1][10],          ;
+;                                       ;                           ; registers:reg_instance|regs[3][10], registers:reg_instance|regs[2][10],          ;
+;                                       ;                           ; registers:reg_instance|regs[4][10], registers:reg_instance|regs[7][10],          ;
+;                                       ;                           ; registers:reg_instance|regs[1][8], registers:reg_instance|regs[3][8],            ;
+;                                       ;                           ; registers:reg_instance|regs[2][8], registers:reg_instance|regs[4][8],            ;
+;                                       ;                           ; registers:reg_instance|regs[7][8], registers:reg_instance|regs[1][7],            ;
+;                                       ;                           ; registers:reg_instance|regs[3][7], registers:reg_instance|regs[2][7],            ;
+;                                       ;                           ; registers:reg_instance|regs[4][7], registers:reg_instance|regs[7][7],            ;
+;                                       ;                           ; registers:reg_instance|regs[1][6], registers:reg_instance|regs[3][6],            ;
+;                                       ;                           ; registers:reg_instance|regs[2][6], registers:reg_instance|regs[4][6],            ;
+;                                       ;                           ; registers:reg_instance|regs[7][6], registers:reg_instance|regs[1][5],            ;
+;                                       ;                           ; registers:reg_instance|regs[3][5], registers:reg_instance|regs[2][5],            ;
+;                                       ;                           ; registers:reg_instance|regs[4][5], registers:reg_instance|regs[7][5],            ;
+;                                       ;                           ; registers:reg_instance|regs[1][4], registers:reg_instance|regs[3][4],            ;
+;                                       ;                           ; registers:reg_instance|regs[2][4], registers:reg_instance|regs[4][4],            ;
+;                                       ;                           ; registers:reg_instance|regs[7][4], registers:reg_instance|regs[1][3],            ;
+;                                       ;                           ; registers:reg_instance|regs[3][3], registers:reg_instance|regs[2][3],            ;
+;                                       ;                           ; registers:reg_instance|regs[4][3], registers:reg_instance|regs[7][3],            ;
+;                                       ;                           ; registers:reg_instance|regs[1][2], registers:reg_instance|regs[3][2],            ;
+;                                       ;                           ; registers:reg_instance|regs[2][2], registers:reg_instance|regs[4][2],            ;
+;                                       ;                           ; registers:reg_instance|regs[7][2], registers:reg_instance|regs[1][1],            ;
+;                                       ;                           ; registers:reg_instance|regs[3][1], registers:reg_instance|regs[2][1],            ;
+;                                       ;                           ; registers:reg_instance|regs[4][1], registers:reg_instance|regs[7][1],            ;
+;                                       ;                           ; registers:reg_instance|regs[1][0], registers:reg_instance|regs[3][0],            ;
+;                                       ;                           ; registers:reg_instance|regs[2][0], registers:reg_instance|regs[4][0],            ;
+;                                       ;                           ; registers:reg_instance|regs[7][0], registers:reg_instance|regs[0][7],            ;
+;                                       ;                           ; registers:reg_instance|regs[0][6], registers:reg_instance|regs[0][5],            ;
+;                                       ;                           ; registers:reg_instance|regs[0][8], registers:reg_instance|regs[0][9],            ;
+;                                       ;                           ; registers:reg_instance|regs[0][10], registers:reg_instance|regs[0][11],          ;
+;                                       ;                           ; registers:reg_instance|regs[0][12], registers:reg_instance|regs[0][15],          ;
+;                                       ;                           ; registers:reg_instance|regs[0][14], registers:reg_instance|regs[0][13],          ;
+;                                       ;                           ; pc:pc_instance|pc[0], registers:reg_instance|regs[0][0], pc:pc_instance|pc[1],   ;
+;                                       ;                           ; registers:reg_instance|regs[0][1], pc:pc_instance|pc[2],                         ;
+;                                       ;                           ; registers:reg_instance|regs[0][2], pc:pc_instance|pc[3],                         ;
+;                                       ;                           ; registers:reg_instance|regs[0][3], pc:pc_instance|pc[4],                         ;
+;                                       ;                           ; registers:reg_instance|regs[0][4], temp_1:t1_instance|t1[15],                    ;
+;                                       ;                           ; temp_1:t1_instance|t1[14], temp_1:t1_instance|t1[13], temp_1:t1_instance|t1[12], ;
+;                                       ;                           ; temp_1:t1_instance|t1[11], temp_2:t2_instance|t2[15], temp_2:t2_instance|t2[14], ;
+;                                       ;                           ; temp_2:t2_instance|t2[13], temp_2:t2_instance|t2[12], temp_2:t2_instance|t2[11], ;
+;                                       ;                           ; temp_2:t2_instance|t2[10], temp_2:t2_instance|t2[9], temp_2:t2_instance|t2[8],   ;
+;                                       ;                           ; temp_2:t2_instance|t2[7], temp_2:t2_instance|t2[6], temp_2:t2_instance|t2[5],    ;
+;                                       ;                           ; temp_2:t2_instance|t2[4], temp_2:t2_instance|t2[3], temp_2:t2_instance|t2[2],    ;
+;                                       ;                           ; temp_2:t2_instance|t2[1], temp_2:t2_instance|t2[0], temp_1:t1_instance|t1[0],    ;
+;                                       ;                           ; temp_1:t1_instance|t1[1], temp_1:t1_instance|t1[2], temp_1:t1_instance|t1[3]     ;
+; ins_setter:stateSet_instance|state[0] ; Stuck at GND              ; temp_3:t3_instance|t3[12], temp_3:t3_instance|t3[11], temp_3:t3_instance|t3[10], ;
+;                                       ; due to stuck port data_in ; temp_1:t1_instance|t1[6], temp_1:t1_instance|t1[5], temp_1:t1_instance|t1[4],    ;
+;                                       ;                           ; temp_3:t3_instance|t3[0], temp_3:t3_instance|t3[2], temp_3:t3_instance|t3[3],    ;
+;                                       ;                           ; temp_3:t3_instance|t3[4]                                                         ;
+; ir:ir_instance|ir_store[11]           ; Stuck at GND              ; pc:pc_instance|pc[15], pc:pc_instance|pc[13], pc:pc_instance|pc[6],              ;
+;                                       ; due to stuck port data_in ; pc:pc_instance|pc[5]                                                             ;
+; ir:ir_instance|ir_store[2]            ; Stuck at GND              ; temp_3:t3_instance|t3[9], pc:pc_instance|pc[9], temp_1:t1_instance|t1[9]         ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[1]            ; Stuck at GND              ; temp_3:t3_instance|t3[8], pc:pc_instance|pc[8], temp_1:t1_instance|t1[8]         ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[0]            ; Stuck at GND              ; temp_3:t3_instance|t3[7], pc:pc_instance|pc[7], temp_1:t1_instance|t1[7]         ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[5]            ; Stuck at GND              ; pc:pc_instance|pc[14], pc:pc_instance|pc[12]                                     ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[3]            ; Stuck at GND              ; pc:pc_instance|pc[10], temp_1:t1_instance|t1[10]                                 ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[7]            ; Stuck at GND              ; temp_3:t3_instance|t3[14]                                                        ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[6]            ; Stuck at GND              ; temp_3:t3_instance|t3[13]                                                        ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
+; ir:ir_instance|ir_store[4]            ; Stuck at GND              ; pc:pc_instance|pc[11]                                                            ;
+;                                       ; due to stuck port data_in ;                                                                                  ;
++---------------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -475,32 +462,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|pc:pc_instance|pc[10]              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|temp_2:t2_instance|t2[3]           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|pc:pc_instance|pc[15]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|temp_2:t2_instance|t2[9]           ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|temp_1:t1_instance|t1[4]           ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[7][2]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[7][14] ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[1][1]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[1][15] ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[2][1]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[2][10] ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[3][3]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[3][14] ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[4][3]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[4][12] ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[5][6]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[5][10] ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[6][0]  ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[6][15] ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[0][0]  ;
-; 9:1                ; 9 bits    ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[0][9]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DUT|ir:ir_instance|reg_3[0]            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|pc_out[6]         ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|registers:reg_instance|Mux10       ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|registers:reg_instance|Mux18       ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[4][3]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[5][14] ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[1][12] ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[2][14] ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[3][4]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[6][12] ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[7][0]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[0][15] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|pc_out[8]         ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |DUT|registers:reg_instance|regs        ;
-; 33:1               ; 16 bits   ; 352 LEs       ; 96 LEs               ; 256 LEs                ; No         ; |DUT|registers:reg_instance|t2[12]      ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|t3[2]             ;
+; 33:1               ; 16 bits   ; 352 LEs       ; 80 LEs               ; 272 LEs                ; No         ; |DUT|registers:reg_instance|t2[14]      ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|t3[13]            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
@@ -510,7 +486,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 17 02:38:16 2022
+    Info: Processing started: Sun Apr 17 04:34:19 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iitb-risc -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -608,15 +584,16 @@ Warning (10492): VHDL Process Statement warning at ins_inter.vhd(307): signal "i
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(315): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 315
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(320): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 320
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(322): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 322
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(328): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 328
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(333): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 333
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(338): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 338
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(343): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 343
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(348): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 348
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(353): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 353
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(358): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 358
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(363): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 363
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(364): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 364
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(324): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 324
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(330): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 330
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(335): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 335
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(340): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 340
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(345): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 345
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(350): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 350
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(355): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 355
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(360): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 360
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(365): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 365
+Warning (10492): VHDL Process Statement warning at ins_inter.vhd(370): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 370
 Warning (10631): VHDL Process Statement warning at ins_inter.vhd(49): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 49
 Warning (10631): VHDL Process Statement warning at ins_inter.vhd(49): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 49
 Info (10041): Inferred latch for "next_state_process:i[0]" at ins_inter.vhd(49) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 49
@@ -1168,15 +1145,6 @@ Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|\next_state_pr
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|\next_state_process:i[29]" is permanently disabled
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|\next_state_process:i[30]" is permanently disabled
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|\next_state_process:i[31]" is permanently disabled
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
@@ -1218,32 +1186,26 @@ Warning (14025): LATCH primitive "temp_3:t3_instance|reg[13]" is permanently dis
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "shifter_7:shift7_instance|rf_d3[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (14025): LATCH primitive "pc:pc_instance|reg_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
@@ -1253,22 +1215,6 @@ Warning (14025): LATCH primitive "pc:pc_instance|reg_out[5]" is permanently disa
 Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Warning (14025): LATCH primitive "temp_3:t3_instance|reg[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_2:t2_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_2:t2_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (14025): LATCH primitive "temp_2:t2_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
@@ -1305,14 +1251,8 @@ Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[4]" is permane
 Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[3]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[2]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[1]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_vector[0]" is stuck at VCC File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
+    Warning (13410): Pin "output_vector[0]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[1]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[2]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[3]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
@@ -1328,10 +1268,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 306 warnings
-    Info: Peak virtual memory: 406 megabytes
-    Info: Processing ended: Sun Apr 17 02:38:30 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 270 warnings
+    Info: Peak virtual memory: 407 megabytes
+    Info: Processing ended: Sun Apr 17 04:34:32 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:36
 
 

@@ -21,7 +21,7 @@ entity alu is
 	 
 architecture working of alu is
 signal carry: std_logic;
-signal zero: std_logic:='0';
+signal zero: std_logic;
 begin
 	carry_out <= carry;
 	zero_out<= zero;
@@ -120,7 +120,7 @@ begin
 		if ((t1 nand t2)= x"0000") then
 			zero <= '0';
 		end if;
-	elsif(state="001101") then
+	elsif(state="101001") then
 		--cmp
 		if (t1 = t2) then
 			zero <= '1';

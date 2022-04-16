@@ -24,7 +24,7 @@ entity registers is
 architecture working of registers is 
 type mem_array is array (0 to 7 ) of std_logic_vector (15 downto 0);
 signal regs: mem_array :=(
-   x"0002",x"0001", x"0000", x"0000",
+   x"0000",x"0000", x"0000", x"0000",
 	x"0000",x"0000", x"0000", x"0000"
    ); 
 begin
@@ -84,8 +84,9 @@ begin
 		regs(6) <= t2_in;
 	elsif (state="010111") then	
 		regs(7) <= t2_in;
-	elsif (state="100010") then	
+	elsif (state="100010" or state="100011") then	
 		regs(to_integer(unsigned(reg_a1))) <= pc_in;
+	
 	end if;
 	end if;
 end process;

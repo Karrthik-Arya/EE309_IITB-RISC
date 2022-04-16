@@ -321,6 +321,8 @@ begin
 			next_state <="100110";
 		 elsif(op_code="1001") then
 			next_state <="000001";
+		elsif (op_code="1001") then
+			next_state <= "100110";
 		 end if;
 		 
 		 
@@ -345,7 +347,7 @@ begin
 		 end if;
 		 
 		  when "100110"=> --s38
-		 if(op_code="1000") then
+		 if(op_code="1000" or op_code="1001") then
 			next_state <="000001";
 		 end if;
 		 
@@ -359,15 +361,17 @@ begin
 			next_state <="000100";
 		 end if;
 		 
-	when "101001"=> --s40
+	when "101001"=> --s41
 		 if(op_code="1000") then
-		  if(zero = '1') then
+			next_state<="101010";
+		 end if;
+	
+	when "101010"=>
+		 if(zero = '1') then
 			next_state <="100001";
 		  else
 		   next_state<= "000001";
 			end if;
-		 
-		 end if;
 
 			
 	when others =>
