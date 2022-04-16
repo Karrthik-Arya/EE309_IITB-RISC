@@ -39,9 +39,9 @@ begin
 regs_write: process(clk)
 begin
  if (falling_edge(clk)) then
-	if (state = "000111") then
+	if (state = "000000") then
 		regs(to_integer(unsigned(reg_a3)))<= t3;
-	elsif (state="") then
+	elsif (state="000111") then
 		regs(to_integer(unsigned(reg_a3)))<= shift7;
 	end if;
 	end if;

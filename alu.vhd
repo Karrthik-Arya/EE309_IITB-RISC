@@ -21,7 +21,7 @@ architecture working of alu is
 signal carry: std_logic;
 signal zero: std_logic;
 begin
-	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_6)
+	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_7)
 	variable temp: integer;
 	begin
 	 if (state="001101" or state="011001") then

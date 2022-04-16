@@ -34,7 +34,7 @@ entity ins_decoder is
 port(
         next_state: out std_logic_vector(5 downto 0);
 		  state: in std_logic_vector(5 downto 0);
-		  op_code: in std_logic_vector(4 downto 0);
+		  op_code: in std_logic_vector(3 downto 0);
 		  cz: in std_logic_vector(1 downto 0)
 		  );
 end ins_decoder;
@@ -45,24 +45,16 @@ next_state_process: process(state)
 begin
 	case state is
 	when "000000"=>
-		if (op_code="0001") then
+		if (op_code="0011") then
 			next_state <= "000001";
 		end if;
 	when "000001"=>
-		if (op_code="0001") then
-			next_state <= "000010";
+		if (op_code="0011") then
+			next_state <= "000111";
 		end if;
-	when "000010"=>
-		if (op_code="0001") then
-			next_state <= "000011";
-		end if;
-	when "000011"=>
-		if (op_code="0001") then
-			next_state <= "000100";
-		end if;
-	when "000100"=>
-		if (op_code="0001") then
-			next_state <= "00000";
+	when "000111"=>
+		if (op_code="0011") then
+			next_state <= "000001";
 		end if;
 	when others =>
 		next_state<="000000";

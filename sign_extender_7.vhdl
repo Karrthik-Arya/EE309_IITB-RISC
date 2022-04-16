@@ -13,7 +13,7 @@ end entity;
 	 
 architecture working of sign_extender_7_component is
 begin
-	ir_proc: process(ir_8_0)
+	ir_proc: process(ir_8_0, state)
 	variable temp: integer;
 	begin
 	 if (state = "000000") then

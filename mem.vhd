@@ -28,7 +28,7 @@ architecture working of mem is
    ); 
 	
 	signal mem_ins: mem_array := (
-	 x"0000",x"0000", x"0000", x"0000",
+	 b"0011000000000001",x"0000", x"0000", x"0000",
 	x"0000",x"0000", x"0000", x"0000",
 	x"0000",x"0000", x"0000", x"0000",
 	x"0000",x"0000", x"0000", x"0000",
@@ -41,11 +41,11 @@ architecture working of mem is
 	mem_action: process(clk)
 	begin
 	if (falling_edge(clk) and (state="001101" or state="011001")) then
-	 mem_data(to_integer(unsigned(addr))) <= data_1;
+	 mem_data(to_integer(unsigned(addr))) <= t1;
 	end if;
 	end process;
 	data_2 <= mem_data(to_integer(unsigned(addr)));
-	ir_data <= mem_ins(to_integer(unsigned(addr));
+	ir_data <= mem_ins(to_integer(unsigned(addr)));
 end working;
 	
 	
