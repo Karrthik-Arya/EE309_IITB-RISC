@@ -78,10 +78,10 @@ begin
 				t3 <= std_logic_vector(to_unsigned(temp,16));
 			end if;
 		end if;
-	elsif(state="001101") then
+	elsif(state="000001") then
 	--pc
 		temp := to_integer(unsigned(pc_in)) + 1;
-		t3 <= std_logic_vector(to_unsigned(temp,16));
+		pc_out <= std_logic_vector(to_unsigned(temp,16));
 	elsif(state="001101") then
 		--ndc
 		if(carry='1') then

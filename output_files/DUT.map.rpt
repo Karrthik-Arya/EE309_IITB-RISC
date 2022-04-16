@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sat Apr 16 11:58:22 2022
+Sat Apr 16 14:47:55 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,11 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +37,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Apr 16 11:58:22 2022       ;
+; Analysis & Synthesis Status ; Failed - Sat Apr 16 14:47:55 2022           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 0                                           ;
-; Total pins                  ; 2                                           ;
-; Total virtual pins          ; 0                                           ;
-; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -140,88 +132,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
-; sign_extender_10.vhdl            ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl ;         ;
-; sign_extender_7.vhdl             ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl  ;         ;
-; shifter_7.vhdl                   ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl        ;         ;
-; shifter_1.vhdl                   ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl        ;         ;
-; pc.vhdl                          ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl               ;         ;
-; ins_inter.vhd                    ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd         ;         ;
-; DUT.vhd                          ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd               ;         ;
-; mem.vhd                          ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd               ;         ;
-; regs.vhd                         ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd              ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd               ;         ;
-; temps.vhd                        ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd             ;         ;
-; ir.vhd                           ; yes             ; User VHDL File  ; /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd                ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 2     ;
-+---------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 11:58:08 2022
+    Info: Processing started: Sat Apr 16 14:47:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iitb-risc -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -240,11 +157,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file shifter
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhdl
     Info (12022): Found design unit 1: pc-working File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 18
     Info (12023): Found entity 1: pc File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 7
-Info (12021): Found 4 design units, including 2 entities, in source file ins_inter.vhd
-    Info (12022): Found design unit 1: ins_setter-working File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 13
-    Info (12022): Found design unit 2: ins_decoder-working File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 42
-    Info (12023): Found entity 1: ins_setter File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 6
-    Info (12023): Found entity 2: ins_decoder File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 33
+Error (10500): VHDL syntax error at ins_inter.vhd(165) near text "<=";  expecting "!", or "=>" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 165
+Error (10500): VHDL syntax error at ins_inter.vhd(253) near text """ end of line inside a string File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 253
+Error (10500): VHDL syntax error at ins_inter.vhd(253) near text "end";  expecting ";" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 253
+Error (10500): VHDL syntax error at ins_inter.vhd(263) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 263
+Error (10500): VHDL syntax error at ins_inter.vhd(270) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 270
+Error (10500): VHDL syntax error at ins_inter.vhd(279) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 279
+Error (10500): VHDL syntax error at ins_inter.vhd(281) near text "case";  expecting "if" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 281
+Info (12021): Found 0 design units, including 0 entities, in source file ins_inter.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file DUT.vhd
     Info (12022): Found design unit 1: DUT-DutWrap File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 8
     Info (12023): Found entity 1: DUT File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 3
@@ -267,367 +187,10 @@ Info (12021): Found 6 design units, including 3 entities, in source file temps.v
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12022): Found design unit 1: ir-working File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 18
     Info (12023): Found entity 1: ir File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 5
-Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DUT.vhd(12): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 12
-Info (12128): Elaborating entity "ins_decoder" for hierarchy "ins_decoder:stateTrans_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 167
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(48): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 48
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(52): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 52
-Warning (10492): VHDL Process Statement warning at ins_inter.vhd(56): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 56
-Warning (10631): VHDL Process Statement warning at ins_inter.vhd(44): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[0]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[1]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[2]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[3]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[4]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (10041): Inferred latch for "next_state[5]" at ins_inter.vhd(44) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 44
-Info (12128): Elaborating entity "ins_setter" for hierarchy "ins_setter:stateSet_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 175
-Info (12128): Elaborating entity "ir" for hierarchy "ir:ir_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 183
-Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "shift7", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_2", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "sign_ex", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[3]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[4]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "sign_ex[5]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_2[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_2[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_2[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_1[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_1[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_1[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_3[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_3[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "reg_3[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[3]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[4]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[5]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[6]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[7]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (10041): Inferred latch for "shift7[8]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 195
-Warning (10492): VHDL Process Statement warning at mem.vhd(43): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 43
-Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 207
-Warning (10541): VHDL Signal Declaration warning at regs.vhd(17): used implicit default value for signal "pc_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at regs.vhd(33): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at regs.vhd(34): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at regs.vhd(35): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 35
-Warning (10631): VHDL Process Statement warning at regs.vhd(31): inferring latch(es) for signal or variable "t1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Warning (10631): VHDL Process Statement warning at regs.vhd(31): inferring latch(es) for signal or variable "t2", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[0]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[1]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[2]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[3]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[4]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[5]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[6]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[7]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[8]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[9]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[10]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[11]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[12]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[13]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[14]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t2[15]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[0]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[1]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[2]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[3]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[4]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[5]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[6]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[7]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[8]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[9]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[10]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[11]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[12]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[13]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[14]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (10041): Inferred latch for "t1[15]" at regs.vhd(31) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 31
-Info (12128): Elaborating entity "temp_1" for hierarchy "temp_1:t1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 223
-Warning (10492): VHDL Process Statement warning at temps.vhd(23): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at temps.vhd(26): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 26
-Warning (10631): VHDL Process Statement warning at temps.vhd(21): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Warning (10631): VHDL Process Statement warning at temps.vhd(21): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[0]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[1]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[2]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[3]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[4]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[5]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[6]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[7]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[8]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[9]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[10]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[11]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[12]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[13]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[14]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "data_1[15]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[0]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[1]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[2]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[3]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[4]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[5]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[6]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[7]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[8]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[9]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[10]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[11]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[12]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[13]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[14]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (10041): Inferred latch for "alu[15]" at temps.vhd(21) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 21
-Info (12128): Elaborating entity "temp_2" for hierarchy "temp_2:t2_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 235
-Warning (10541): VHDL Signal Declaration warning at temps.vhd(57): used implicit default value for signal "shift1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at temps.vhd(66): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at temps.vhd(69): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at temps.vhd(72): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (10631): VHDL Process Statement warning at temps.vhd(64): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Warning (10631): VHDL Process Statement warning at temps.vhd(64): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Warning (10631): VHDL Process Statement warning at temps.vhd(64): inferring latch(es) for signal or variable "reg_out", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[0]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[1]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[2]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[3]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[4]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[5]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[6]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[7]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[8]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[9]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[10]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[11]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[12]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[13]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[14]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "reg_out[15]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[0]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[1]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[2]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[3]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[4]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[5]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[6]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[7]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[8]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[9]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[10]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[11]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[12]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[13]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[14]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "data_1[15]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[0]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[1]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[2]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[3]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[4]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[5]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[6]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[7]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[8]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[9]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[10]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[11]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[12]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[13]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[14]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (10041): Inferred latch for "alu[15]" at temps.vhd(64) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 64
-Info (12128): Elaborating entity "temp_3" for hierarchy "temp_3:t3_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 247
-Warning (10492): VHDL Process Statement warning at temps.vhd(111): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 111
-Warning (10492): VHDL Process Statement warning at temps.vhd(114): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 114
-Warning (10631): VHDL Process Statement warning at temps.vhd(109): inferring latch(es) for signal or variable "reg", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Warning (10631): VHDL Process Statement warning at temps.vhd(109): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[0]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[1]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[2]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[3]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[4]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[5]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[6]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[7]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[8]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[9]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[10]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[11]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[12]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[13]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[14]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "data_1[15]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[0]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[1]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[2]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[3]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[4]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[5]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[6]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[7]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[8]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[9]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[10]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[11]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[12]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[13]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[14]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (10041): Inferred latch for "reg[15]" at temps.vhd(109) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 109
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 256
-Warning (10541): VHDL Signal Declaration warning at alu.vhd(9): used implicit default value for signal "t1_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 9
-Warning (10541): VHDL Signal Declaration warning at alu.vhd(16): used implicit default value for signal "pc_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at alu.vhd(37): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at alu.vhd(47): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 47
-Warning (10492): VHDL Process Statement warning at alu.vhd(57): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at alu.vhd(59): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at alu.vhd(69): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at alu.vhd(71): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at alu.vhd(81): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 81
-Warning (10492): VHDL Process Statement warning at alu.vhd(85): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 85
-Warning (10492): VHDL Process Statement warning at alu.vhd(87): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at alu.vhd(93): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at alu.vhd(93): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at alu.vhd(99): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at alu.vhd(105): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 105
-Warning (10492): VHDL Process Statement warning at alu.vhd(112): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 112
-Warning (10631): VHDL Process Statement warning at alu.vhd(24): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Warning (10631): VHDL Process Statement warning at alu.vhd(24): inferring latch(es) for signal or variable "t3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Warning (10631): VHDL Process Statement warning at alu.vhd(24): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "zero" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[0]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[1]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[2]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[3]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[4]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[5]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[6]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[7]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[8]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[9]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[10]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[11]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[12]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[13]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[14]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "t3[15]" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (10041): Inferred latch for "carry" at alu.vhd(24) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 24
-Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 270
-Warning (10541): VHDL Signal Declaration warning at pc.vhdl(10): used implicit default value for signal "alu_a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 10
-Warning (10541): VHDL Signal Declaration warning at pc.vhdl(12): used implicit default value for signal "reg_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 12
-Warning (10492): VHDL Process Statement warning at pc.vhdl(25): signal "pc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 25
-Warning (10631): VHDL Process Statement warning at pc.vhdl(22): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[0]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[1]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[2]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[3]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[4]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[5]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[6]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[7]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[8]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[9]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[10]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[11]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[12]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[13]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[14]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (10041): Inferred latch for "data_1[15]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (12128): Elaborating entity "shifter_1" for hierarchy "shifter_1:shift1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 281
-Warning (10492): VHDL Process Statement warning at shifter_1.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 19
-Warning (10631): VHDL Process Statement warning at shifter_1.vhdl(16): inferring latch(es) for signal or variable "alu_a", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[0]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[1]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[2]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[3]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[4]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[5]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[6]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[7]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[8]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[9]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[10]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[11]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[12]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[13]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[14]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (10041): Inferred latch for "alu_a[15]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (12128): Elaborating entity "shifter_7" for hierarchy "shifter_7:shift7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 288
-Warning (10492): VHDL Process Statement warning at shifter_7.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 19
-Warning (10631): VHDL Process Statement warning at shifter_7.vhdl(16): inferring latch(es) for signal or variable "rf_d3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[0]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[1]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[2]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[3]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[4]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[5]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[6]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[7]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[8]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[9]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[10]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[11]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[12]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[13]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[14]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (10041): Inferred latch for "rf_d3[15]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_10_component" for hierarchy "sign_extender_10_component:sign_ex10_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 295
-Warning (10492): VHDL Process Statement warning at sign_extender_10.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 19
-Warning (10631): VHDL Process Statement warning at sign_extender_10.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[0]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[1]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[2]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[3]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[4]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[5]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[6]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[7]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[8]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[9]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[10]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[11]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[12]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[13]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[14]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (10041): Inferred latch for "alu[15]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_7_component" for hierarchy "sign_extender_7_component:sign_ex7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 302
-Warning (10631): VHDL Process Statement warning at sign_extender_7.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[0]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[1]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[2]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[3]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[4]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[5]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[6]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[7]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[8]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[9]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[10]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[11]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[12]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[13]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[14]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Info (10041): Inferred latch for "alu[15]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_vector[0]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "input_vector[0]" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 4
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 401 megabytes
-    Info: Processing ended: Sat Apr 16 11:58:22 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:38
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
+    Error: Peak virtual memory: 398 megabytes
+    Error: Processing ended: Sat Apr 16 14:47:55 2022
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:24
 
 

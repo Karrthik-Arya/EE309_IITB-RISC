@@ -23,6 +23,7 @@ pc_read: process(state)
 begin 
 	if (state = "000001") then
 		data_1 <= pc;
+		alu_a <= pc;
 	end if;
  end process;
  
