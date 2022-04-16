@@ -16,7 +16,7 @@ begin
 	t2_proc: process(t2)
 	variable i: integer;
 	begin
-	 if (state="000000") then
+	 if (state="000000" or state="000101") then
 	 alu_a(0) <= '0';
 		 FOR i IN 0 TO 14 LOOP
 	        alu_a(i+1) <= t2(i);

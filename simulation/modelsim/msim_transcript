@@ -11,7 +11,7 @@
 # 
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:53 on Apr 16,2022
+# Start time: 23:15:34 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,11 +19,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sign_extender_10_component
 # -- Compiling architecture working of sign_extender_10_component
-# End time: 14:21:53 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:53 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,11 +31,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sign_extender_7_component
 # -- Compiling architecture working of sign_extender_7_component
-# End time: 14:21:53 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:53 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,11 +43,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity shifter_7
 # -- Compiling architecture working of shifter_7
-# End time: 14:21:53 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:53 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,11 +55,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity shifter_1
 # -- Compiling architecture working of shifter_1
-# End time: 14:21:53 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,11 +67,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity pc
 # -- Compiling architecture working of pc
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,22 +81,22 @@
 # -- Compiling architecture working of ins_setter
 # -- Compiling entity ins_decoder
 # -- Compiling architecture working of ins_decoder
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity DUT
 # -- Compiling architecture DutWrap of DUT
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -104,11 +104,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mem
 # -- Compiling architecture working of mem
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -116,11 +116,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity registers
 # -- Compiling architecture working of registers
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -128,11 +128,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture working of alu
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -144,11 +144,11 @@
 # -- Compiling architecture working2 of temp_2
 # -- Compiling entity temp_3
 # -- Compiling architecture working3 of temp_3
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -156,24 +156,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ir
 # -- Compiling architecture working of ir
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # vcom -reportprogress 300 -93 -work work /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 14:21:54 on Apr 16,2022, Elapsed time: 0:00:00
+# End time: 23:15:35 on Apr 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 14:21:54 on Apr 16,2022
+# Start time: 23:15:35 on Apr 16,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -196,14 +196,6 @@
 # Loading work.sign_extender_7_component(working)
 # ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/reg_instance/pc_out(15 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/t2_instance/shift1(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/alu_instance/t1_out(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/alu_instance/pc_out(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/pc_instance/alu_a(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 # ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/pc_instance/reg_out(15 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 # 
@@ -219,49 +211,63 @@
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/mem_instance
 # ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 504 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 504 ns  Iteration: 0  Instance: /testbench
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/dut_instance/sign_ex7_instance
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 14 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 14 ns  Iteration: 0  Instance: /testbench
+#    Time: 504 ns  Iteration: 2  Instance: /testbench/dut_instance/alu_instance
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 1008 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 1008 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 1512 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 1512 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 2016 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 2016 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 2520 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 2520 ns  Iteration: 0  Instance: /testbench
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 14 ns  Iteration: 1  Instance: /testbench/dut_instance/reg_instance
+#    Time: 2520 ns  Iteration: 2  Instance: /testbench/dut_instance/reg_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2520 ns  Iteration: 2  Instance: /testbench/dut_instance/reg_instance
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 3024 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 3024 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 3528 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 3528 ns  Iteration: 0  Instance: /testbench
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3528 ns  Iteration: 2  Instance: /testbench/dut_instance/alu_instance
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 4032 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 4032 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 4536 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 4536 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 5040 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 5040 ns  Iteration: 0  Instance: /testbench
 # ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 28 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 28 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 42 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 42 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 56 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 56 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 70 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 70 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 84 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 84 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 98 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 98 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 112 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 112 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 126 ns  Iteration: 0  Instance: /testbench
-# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
-#    Time: 126 ns  Iteration: 0  Instance: /testbench
+#    Time: 5544 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 5544 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 10, found 0.
+#    Time: 5544 ns  Iteration: 0  Instance: /testbench
 # ** Note: SUCCESS, all tests passed.
-#    Time: 140 ns  Iteration: 0  Instance: /testbench
-# End time: 14:28:18 on Apr 16,2022, Elapsed time: 0:06:24
-# Errors: 20, Warnings: 10
+#    Time: 6048 ns  Iteration: 0  Instance: /testbench

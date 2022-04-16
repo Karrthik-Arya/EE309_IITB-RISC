@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity DUT is
 port ( input_vector : in std_logic_vector(0 downto 0);
-			output_vector: out std_logic_vector(0 downto 0));
+			output_vector: out std_logic_vector(9 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
-	signal state: std_logic_vector(5 downto 0 ):="000000";
-	signal next_state: std_logic_vector(5 downto 0 ):="000000";
+	signal state: std_logic_vector(5 downto 0 ):="000001";
+	signal next_state: std_logic_vector(5 downto 0 ):="000001";
 	signal clk: std_logic;
 	signal reset: std_logic;
-	signal curr_ins, w_alu_pcout, w_dout, w_addr, w_din_t1, w_din_t2, w_din_t3, w_shift7_reg, w_t3_in, w_t1, w_t2, w_t2_in, w_pc_aluin,  w_pc_reg, w_pcout_reg, w_alu_t1, w_alu_t3, w_t1_alu, w_t2_alu, w_t2_1s, w_1s, w_se10, w_se7: std_logic_vector(15 downto 0);
+	signal curr_ins, w_t1_reg_forg, w_alu_pcout, w_dout, w_addr, w_din, w_shift7_reg, w_t3_in, w_t1, w_t2, w_t2_in, w_pc_aluin,  w_pc_reg, w_pcout_reg, w_alu_t1, w_alu_t3, w_t1_alu, w_t2_alu, w_t2_1s, w_1s, w_se10, w_se7, w_ins_addr: std_logic_vector(15 downto 0);
 	signal w1,w2,w3: std_logic_vector(2 downto 0);
 	signal w4: std_logic_vector(8 downto 0);
 	signal w5: std_logic_vector(5 downto 0);
@@ -18,7 +18,10 @@ architecture DutWrap of DUT is
      port(next_state: out std_logic_vector(5 downto 0);
 		  state: in std_logic_vector(5 downto 0);
 		  op_code: in std_logic_vector(3 downto 0);
-		  cz: in std_logic_vector(1 downto 0));
+		  cz: in std_logic_vector(1 downto 0);
+		  imm: in std_logic_vector(8 downto 0);
+		  op_out: out std_logic_vector(3 downto 0)
+		  );
    end component;
 	
 	component ins_setter is 
@@ -44,11 +47,10 @@ architecture DutWrap of DUT is
 	component mem is 
 	port( addr: in std_logic_vector(15 downto 0);
 	 state: in std_logic_vector(5 downto 0);
-	 t1: in std_logic_vector(15 downto 0);
-	 t2: in std_logic_vector(15 downto 0);
-	 t3: in std_logic_vector(15 downto 0);
+	 data_1: in std_logic_vector(15 downto 0);
 	 data_2: out std_logic_vector(15 downto 0);
 	 ir_data: out std_logic_vector(15 downto 0);
+	 ins_addr: in std_logic_vector(15 downto 0);
 	 clk : in std_logic
 	 );
 	end component;
@@ -58,6 +60,7 @@ architecture DutWrap of DUT is
 			reg_a2: in std_logic_vector(2 downto 0);
 			reg_a3: in std_logic_vector(2 downto 0);
 			t1: out std_logic_vector(15 downto 0);
+			t1_in: in std_logic_vector(15 downto 0);
 			t2: out std_logic_vector(15 downto 0);
 			t2_in: in std_logic_vector(15 downto 0);
 			t3: in std_logic_vector(15 downto 0);
@@ -77,7 +80,9 @@ architecture DutWrap of DUT is
 		data_1: out std_logic_vector(15 downto 0);
 		data_2: in std_logic_vector(15 downto 0);
 		state: in std_logic_vector(5 downto 0);
-		alu_in: in std_logic_vector(15 downto 0)
+		alu_in: in std_logic_vector(15 downto 0);
+		reg_out: out std_logic_vector(15 downto 0);
+		mem_a: out std_logic_vector(15 downto 0)
 	);
 	end component;
 	
@@ -163,13 +168,15 @@ component alu is
 	 );
 	 end component;
 begin
-	output_vector<="0";
+	output_vector(9 downto 4) <= state;
    stateTrans_instance: ins_decoder
 			port map (
 					next_state => next_state,
 					state => state,
 					op_code => curr_ins(15 downto 12),
- 					cz => curr_ins(1 downto 0)
+ 					cz => curr_ins(1 downto 0),
+					imm => curr_ins(8 downto 0),
+					op_out => output_vector(3 downto 0)
  					);
 					
 	stateSet_instance: ins_setter
@@ -196,12 +203,11 @@ begin
 			port map(
 				state => state,
 				clk => input_vector(0),
-				t1 => w_din_t1,
-				t2 => w_din_t2,
-				t3 => w_din_t3,
 				addr => w_addr,
+				data_1 => w_din,
 				data_2 => w_dout,
-				ir_data => curr_ins
+				ir_data => curr_ins,
+				ins_addr => w_ins_addr
 			);
 			
 			reg_instance: registers
@@ -217,7 +223,8 @@ begin
 					t2_in => w_t2_in,
 					t1 => w_t1,
 					t2 => w_t2,
-					pc_out => w_pcout_reg
+					pc_out => w_pcout_reg,
+					t1_in => w_t1_reg_forg
 				);
 				
 			t1_instance: temp_1
@@ -228,7 +235,9 @@ begin
 					data_2 => w_dout,
 					alu_in => w_alu_t1,
 					alu => w_t1_alu,
-					data_1 => w_din_t1
+					data_1 => w_din,
+					reg_out => w_t1_reg_forg,
+					mem_a => w_addr
 				);
 				
 				
@@ -239,7 +248,7 @@ begin
 						data_2 => w_dout,
 						reg_in => w_t2,
 						reg_out => w_t2_in,
-						data_1 => w_din_t2,
+						data_1 => w_din,
 						alu => w_t2_alu,
 						shift1 => w_t2_1s
 					);
@@ -250,7 +259,7 @@ begin
 						clk => input_vector(0),
 						alu => w_alu_t3,
 						reg => w_t3_in,
-						data_1 => w_din_t3
+						data_1 => w_addr
 					);
 					
 				alu_instance: alu
@@ -275,7 +284,7 @@ begin
 					reg=> w_pcout_reg,
 					reg_out => w_pc_reg,
 					alu_a=> w_pc_aluin,
-					data_1=> w_addr
+					data_1=> w_ins_addr
 					);
 					
 				shift1_instance: shifter_1

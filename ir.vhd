@@ -29,23 +29,24 @@ begin
 	
 	read_proc: process(ir_store, state)
 	begin
-	if(state="000111") then
-		shift7<=ir_store(8 downto 0);
-		reg_3<=ir_store(11 downto 9);
-	elsif (state="000000") then
+	if(state="000010") then
+		reg_1<=ir_store(11 downto 9);
+		reg_2 <= ir_store(8 downto 6);
+	elsif (state="001100") then
 		reg_1<= ir_store(11 downto 9);
-		reg_2<= ir_store(8 downto 6);
-	elsif(state="000000") then
-		reg_3 <= ir_store(8 downto 6);
-	elsif(state="000000") then	
-		reg_3 <= ir_store(5 downto 3);
-	elsif(state="000000") then
-		shift7 <= ir_store(8 downto 0);
-	elsif(state="000000") then
 		sign_ex <= ir_store(5 downto 0);
 	elsif(state="000000") then
+		reg_3 <= ir_store(8 downto 6);
+	elsif(state="000100") then	
+		reg_3 <= ir_store(5 downto 3);
+	elsif(state="000111") then
+		shift7 <= ir_store(8 downto 0);
 		reg_3 <= ir_store(11 downto 9);
-	elsif(state="000000") then
+	elsif(state="000110") then
+		sign_ex <= ir_store(5 downto 0);
+	elsif(state="001011") then
+		reg_3 <= ir_store(11 downto 9);
+	elsif(state="001000") then
 		reg_1 <= ir_store(8 downto 6);
 	end if;
 	end process;

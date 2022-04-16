@@ -21,20 +21,25 @@ architecture working of alu is
 signal carry: std_logic;
 signal zero: std_logic;
 begin
-	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_7)
+	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_7, state)
 	variable temp: integer;
 	begin
-	 if (state="001101" or state="011001") then
+	 if (state="000011") then
 		 --add
 		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(t2));
 		 if (temp>65535) then
 			carry <= '1';
 			t3 <= std_logic_vector(to_unsigned(temp-65535,16));
+			if(temp=65535) then
+				zero <='1';
+			else
+				zero <='0';
+			end if;	
 		else
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));
 		end if;
-	elsif (state="001101") then
+	elsif (state="000110") then
 		 --adi
 		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(sign_extender_10));
 		 if (temp>65535) then
@@ -44,7 +49,16 @@ begin
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));
 		end if;
-	elsif (state="001101") then
+		
+	elsif (state="001100") then
+		 --sw
+		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(sign_extender_10));
+		 if (temp>65535) then
+			t3 <= std_logic_vector(to_unsigned(temp-65535,16));
+		else
+			t3 <= std_logic_vector(to_unsigned(temp,16));
+		end if;
+	elsif (state="000101") then
 		 --adl
 		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(one_bit_shifter));
 		 if (temp>65535) then
@@ -113,6 +127,10 @@ begin
 	--pc-1
 		temp := to_integer(unsigned(pc_in)) -1;
 		t3 <= std_logic_vector(to_unsigned(temp,16));
+		
+	elsif(state="010000") then 
+		temp := to_integer(unsigned(t1)) +1;
+		t1_out <= std_logic_vector(to_unsigned(temp,16));
 	end if;
 	end process;
 end working;

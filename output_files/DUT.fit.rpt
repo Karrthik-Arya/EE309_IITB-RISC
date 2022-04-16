@@ -1,5 +1,5 @@
 Fitter report for DUT
-Sat Apr 16 11:58:24 2022
+Sat Apr 16 23:00:56 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sat Apr 16 11:58:24 2022       ;
+; Fitter Status         ; Successful - Sat Apr 16 23:00:56 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                ; 5M2210ZF324I5                               ;
 ; Timing Models         ; Final                                       ;
 ; Total logic elements  ; 0 / 2,210 ( 0 % )                           ;
-; Total pins            ; 2 / 271 ( < 1 % )                           ;
+; Total pins            ; 11 / 271 ( 4 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -164,7 +164,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; Total LABs                                  ; 0 / 221 ( 0 % )    ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 2 / 271 ( < 1 % )  ;
+; I/O pins                                    ; 11 / 271 ( 4 % )   ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )      ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
@@ -185,7 +185,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; input_vector[0] ; C13   ; 2        ; 15           ; 14           ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[0] ; P4    ; 1        ; 0            ; 5            ; 6           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -195,6 +195,15 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; output_vector[0] ; U1    ; 4        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[1] ; U8    ; 4        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[2] ; E11   ; 2        ; 15           ; 14           ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[3] ; T14   ; 4        ; 16           ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[4] ; D1    ; 1        ; 0            ; 13           ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[5] ; G12   ; 3        ; 21           ; 10           ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[6] ; R3    ; 1        ; 0            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[7] ; J3    ; 1        ; 0            ; 9            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[8] ; R2    ; 1        ; 0            ; 4            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[9] ; P16   ; 3        ; 21           ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -203,10 +212,10 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 +----------+----------------+---------------+--------------+
 ; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
 +----------+----------------+---------------+--------------+
-; 1        ; 0 / 68 ( 0 % ) ; 3.3V          ; --           ;
+; 1        ; 5 / 68 ( 7 % ) ; 3.3V          ; --           ;
 ; 2        ; 1 / 66 ( 2 % ) ; 3.3V          ; --           ;
-; 3        ; 0 / 72 ( 0 % ) ; 3.3V          ; --           ;
-; 4        ; 1 / 65 ( 2 % ) ; 3.3V          ; --           ;
+; 3        ; 2 / 72 ( 3 % ) ; 3.3V          ; --           ;
+; 4        ; 3 / 65 ( 5 % ) ; 3.3V          ; --           ;
 +----------+----------------+---------------+--------------+
 
 
@@ -263,13 +272,13 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; C10      ; 239        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 231        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 223        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C13      ; 228        ; 2        ; input_vector[0]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C13      ; 228        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C14      ; 222        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C15      ; 216        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C16      ; 206        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C17      ; 208        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C18      ;            ; 3        ; VCCIO3           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; D1       ; 3          ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D1       ; 3          ; 1        ; output_vector[4] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D2       ; 2          ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D3       ; 4          ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D4       ; 6          ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -297,7 +306,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; E8       ; 255        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E9       ; 247        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E10      ; 235        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; E11      ; 227        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E11      ; 227        ; 2        ; output_vector[2] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E12      ; 219        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ; 213        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E14      ; 204        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -334,7 +343,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; G9       ;            ; 2        ; VCCIO2           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; G10      ;            ; 2        ; VCCIO2           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; G11      ;            ;          ; VCCINT           ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
-; G12      ; 190        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G12      ; 190        ; 3        ; output_vector[5] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G13      ; 192        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G14      ; 194        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G15      ; 196        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -361,7 +370,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; H18      ; 179        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J1       ; 31         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J2       ; 29         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J3       ; 27         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J3       ; 27         ; 1        ; output_vector[7] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J4       ; 36         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J5       ; 38         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J6       ; 34         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -452,7 +461,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; P1       ; 59         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P2       ; 61         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P3       ; 62         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P4       ; 60         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P4       ; 60         ; 1        ; input_vector[0]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P5       ; 66         ; 1        ; #TMS             ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; P6       ; 76         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; P7       ; 84         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -464,12 +473,12 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; P13      ; 130        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; P14      ; 144        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P15      ; 142        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P16      ; 147        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P16      ; 147        ; 3        ; output_vector[9] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P17      ; 149        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P18      ; 151        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R1       ; 63         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R2       ; 64         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R3       ; 65         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R2       ; 64         ; 1        ; output_vector[8] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R3       ; 65         ; 1        ; output_vector[6] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R4       ; 68         ; 1        ; #TCK             ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; R5       ; 74         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R6       ; 78         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -498,7 +507,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; T11      ; 120        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T12      ; 128        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T13      ; 134        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; T14      ; 121        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; T14      ; 121        ; 4        ; output_vector[3] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T15      ; 127        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T16      ; 140        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T17      ; 138        ; 3        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -510,7 +519,7 @@ The pin-out file can be found in /home/winston/Documents/Acads/sem_2/EE309/iitb_
 ; U5       ; 85         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U6       ; 89         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U7       ; 93         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; U8       ; 97         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; U8       ; 97         ; 4        ; output_vector[1] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; U9       ; 101        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U10      ; 104        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U11      ; 107        ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -568,8 +577,17 @@ Note: User assignments will override these defaults. The user specified values a
 +------------------+-----------------------------+
 ; Pin Name         ; Reason                      ;
 +------------------+-----------------------------+
-; input_vector[0]  ; Missing location assignment ;
 ; output_vector[0] ; Missing location assignment ;
+; output_vector[1] ; Missing location assignment ;
+; output_vector[2] ; Missing location assignment ;
+; output_vector[3] ; Missing location assignment ;
+; output_vector[4] ; Missing location assignment ;
+; output_vector[5] ; Missing location assignment ;
+; output_vector[6] ; Missing location assignment ;
+; output_vector[7] ; Missing location assignment ;
+; output_vector[8] ; Missing location assignment ;
+; output_vector[9] ; Missing location assignment ;
+; input_vector[0]  ; Missing location assignment ;
 +------------------+-----------------------------+
 
 
@@ -578,7 +596,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 11   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -588,8 +606,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+----------+---------------+
 ; Name             ; Pin Type ; Pad to Core 0 ;
 +------------------+----------+---------------+
-; input_vector[0]  ; Input    ; (0)           ;
 ; output_vector[0] ; Output   ; --            ;
+; output_vector[1] ; Output   ; --            ;
+; output_vector[2] ; Output   ; --            ;
+; output_vector[3] ; Output   ; --            ;
+; output_vector[4] ; Output   ; --            ;
+; output_vector[5] ; Output   ; --            ;
+; output_vector[6] ; Output   ; --            ;
+; output_vector[7] ; Output   ; --            ;
+; output_vector[8] ; Output   ; --            ;
+; output_vector[9] ; Output   ; --            ;
+; input_vector[0]  ; Input    ; (0)           ;
 +------------------+----------+---------------+
 
 
@@ -636,7 +663,7 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device 5M1270ZF324C5 is compatible
     Info (176445): Device 5M1270ZF324I5 is compatible
     Info (176445): Device 5M2210ZF324C5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 2 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 11 pins of 11 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -652,7 +679,7 @@ Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 2 (unused VREF, 3.3V VCCIO, 1 input, 1 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 11 (unused VREF, 3.3V VCCIO, 1 input, 10 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -674,15 +701,15 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1140 megabytes
-    Info: Processing ended: Sat Apr 16 11:58:24 2022
+    Info: Peak virtual memory: 1141 megabytes
+    Info: Processing ended: Sat Apr 16 23:00:56 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
