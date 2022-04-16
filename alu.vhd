@@ -13,14 +13,18 @@ entity alu is
 	 sign_extender_10: in std_logic_vector(15 downto 0);
 	 sign_extender_7: in std_logic_vector(15 downto 0);
 	 t3: out std_logic_vector(15 downto 0);
+	 carry_out: out std_logic;
+	 zero_out: out std_logic;
 	 pc_out: out std_logic_vector(15 downto 0)
 	 );
 	 end entity;
 	 
 architecture working of alu is
 signal carry: std_logic;
-signal zero: std_logic;
+signal zero: std_logic:='0';
 begin
+	carry_out <= carry;
+	zero_out<= zero;
 	compute : process(t1,t2, pc_in, one_bit_shifter, sign_extender_10, sign_extender_7, state)
 	variable temp: integer;
 	begin
@@ -110,7 +114,7 @@ begin
 			if ((t1 nand t2)= x"0000") then
 			zero <= '0';
 			end if;
-	elsif(state="000101") then
+	elsif(state="101000") then
 		--nand
 		t3 <= t1 nand t2;
 		if ((t1 nand t2)= x"0000") then
@@ -123,14 +127,22 @@ begin
 		else
 			zero<= '0';
 	end if; 
-	elsif(state="001101") then
+	elsif(state="100110") then
 	--pc-1
 		temp := to_integer(unsigned(pc_in)) -1;
-		t3 <= std_logic_vector(to_unsigned(temp,16));
+		pc_out <= std_logic_vector(to_unsigned(temp,16));
 		
 	elsif(state="010000") then 
 		temp := to_integer(unsigned(t1)) +1;
 		t1_out <= std_logic_vector(to_unsigned(temp,16));
+		
+	elsif(state="100001") then
+		 temp := to_integer(unsigned(pc_in)) + to_integer(unsigned(sign_extender_10));
+		 pc_out <= std_logic_vector(to_unsigned(temp,16));
+	elsif (state="100101") then
+		temp := to_integer(unsigned(t1)) + to_integer(unsigned(sign_extender_7));
+		 pc_out <= std_logic_vector(to_unsigned(temp,16));
+		
 	end if;
 	end process;
 end working;

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/16/2022 23:00:59"
+-- DATE "04/17/2022 02:38:38"
 
 -- 
 -- Device: Altera 5M2210ZF324I5 Package FBGA324
@@ -70,7 +70,7 @@ GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => GND,
+	datain => VCC,
 	oe => VCC,
 	padio => ww_output_vector(0));
 
@@ -92,7 +92,7 @@ GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => VCC,
+	datain => GND,
 	oe => VCC,
 	padio => ww_output_vector(2));
 
@@ -103,7 +103,7 @@ GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => VCC,
+	datain => GND,
 	oe => VCC,
 	padio => ww_output_vector(3));
 

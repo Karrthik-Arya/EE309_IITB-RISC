@@ -10,17 +10,20 @@ architecture DutWrap of DUT is
 	signal next_state: std_logic_vector(5 downto 0 ):="000001";
 	signal clk: std_logic;
 	signal reset: std_logic;
-	signal curr_ins, w_t1_reg_forg, w_alu_pcout, w_dout, w_addr, w_din, w_shift7_reg, w_t3_in, w_t1, w_t2, w_t2_in, w_pc_aluin,  w_pc_reg, w_pcout_reg, w_alu_t1, w_alu_t3, w_t1_alu, w_t2_alu, w_t2_1s, w_1s, w_se10, w_se7, w_ins_addr: std_logic_vector(15 downto 0);
+	signal curr_ins, w_addr1, w_addr3,  w_t1_reg_forg, w_alu_pcout, w_dout, w_din_t1, w_din_t2, w_shift7_reg, w_t3_in, w_t1, w_t2, w_t2_in, w_pc_aluin,  w_pc_reg, w_pcout_reg, w_alu_t1, w_alu_t3, w_t1_alu, w_t2_alu, w_t2_1s, w_1s, w_se10, w_se7, w_ins_addr: std_logic_vector(15 downto 0);
 	signal w1,w2,w3: std_logic_vector(2 downto 0);
 	signal w4: std_logic_vector(8 downto 0);
 	signal w5: std_logic_vector(5 downto 0);
+	signal carry, zero: std_logic;
    component ins_decoder is
      port(next_state: out std_logic_vector(5 downto 0);
 		  state: in std_logic_vector(5 downto 0);
 		  op_code: in std_logic_vector(3 downto 0);
 		  cz: in std_logic_vector(1 downto 0);
 		  imm: in std_logic_vector(8 downto 0);
-		  op_out: out std_logic_vector(3 downto 0)
+		  op_out: out std_logic_vector(3 downto 0);
+		  carry: in std_logic;
+		  zero: in std_logic
 		  );
    end component;
 	
@@ -45,9 +48,11 @@ architecture DutWrap of DUT is
 	end component;
 	
 	component mem is 
-	port( addr: in std_logic_vector(15 downto 0);
+	port( t1_addr: in std_logic_vector(15 downto 0);
+	t3_addr: in std_logic_vector(15 downto 0);
 	 state: in std_logic_vector(5 downto 0);
-	 data_1: in std_logic_vector(15 downto 0);
+	 data_t1: in std_logic_vector(15 downto 0);
+	 data_t2: in std_logic_vector(15 downto 0);
 	 data_2: out std_logic_vector(15 downto 0);
 	 ir_data: out std_logic_vector(15 downto 0);
 	 ins_addr: in std_logic_vector(15 downto 0);
@@ -164,6 +169,8 @@ component alu is
 	 sign_extender_7: in std_logic_vector(15 downto 0);
 	 t3: out std_logic_vector(15 downto 0);
 	 t1_out: out std_logic_vector(15 downto 0);
+	 carry_out: out std_logic;
+	 zero_out: out std_logic;
 	 pc_out: out std_logic_vector(15 downto 0)
 	 );
 	 end component;
@@ -176,7 +183,9 @@ begin
 					op_code => curr_ins(15 downto 12),
  					cz => curr_ins(1 downto 0),
 					imm => curr_ins(8 downto 0),
-					op_out => output_vector(3 downto 0)
+					op_out => output_vector(3 downto 0),
+					carry=> carry,
+					zero=> zero
  					);
 					
 	stateSet_instance: ins_setter
@@ -203,8 +212,10 @@ begin
 			port map(
 				state => state,
 				clk => input_vector(0),
-				addr => w_addr,
-				data_1 => w_din,
+				t1_addr => w_addr1,
+				t3_addr => w_addr3,
+				data_t1 => w_din_t1,
+				data_t2=> w_din_t2,
 				data_2 => w_dout,
 				ir_data => curr_ins,
 				ins_addr => w_ins_addr
@@ -235,9 +246,9 @@ begin
 					data_2 => w_dout,
 					alu_in => w_alu_t1,
 					alu => w_t1_alu,
-					data_1 => w_din,
+					data_1 => w_din_t1,
 					reg_out => w_t1_reg_forg,
-					mem_a => w_addr
+					mem_a => w_addr1
 				);
 				
 				
@@ -248,7 +259,7 @@ begin
 						data_2 => w_dout,
 						reg_in => w_t2,
 						reg_out => w_t2_in,
-						data_1 => w_din,
+						data_1 => w_din_t2,
 						alu => w_t2_alu,
 						shift1 => w_t2_1s
 					);
@@ -259,7 +270,7 @@ begin
 						clk => input_vector(0),
 						alu => w_alu_t3,
 						reg => w_t3_in,
-						data_1 => w_addr
+						data_1 => w_addr3
 					);
 					
 				alu_instance: alu
@@ -273,6 +284,8 @@ begin
 						sign_extender_7 => w_se7,
 						t3 => w_alu_t3,
 						pc_out => w_alu_pcout,
+						carry_out=> carry,
+						zero_out=> zero,
 						t1_out => w_alu_t1
 					);
 					

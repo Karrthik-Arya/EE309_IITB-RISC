@@ -16,7 +16,7 @@ begin
 	ir_proc: process(ir_8_0, state)
 	variable temp: integer;
 	begin
-	 if (state = "000000") then
+	 if (state = "100101") then
 		 temp := to_integer(unsigned(ir_8_0));
 		 alu <= std_logic_vector(to_unsigned(temp, 16));
 		end if;

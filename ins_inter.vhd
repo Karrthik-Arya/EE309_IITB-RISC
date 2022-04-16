@@ -37,7 +37,9 @@ port(
 		  op_code: in std_logic_vector(3 downto 0);
 		  cz: in std_logic_vector(1 downto 0);
 		  imm: in std_logic_vector(8 downto 0);
-		  op_out: out std_logic_vector(3 downto 0)
+		  op_out: out std_logic_vector(3 downto 0);
+		  carry: in std_logic;
+		  zero: in std_logic
 		  );
 end ins_decoder;
 
@@ -55,9 +57,46 @@ begin
 		if (op_code = "1111") then
 		next_state<= "111111";
     	
-		elsif (op_code="0001" or op_code="0000" or op_code="0010" or op_code="1000" or op_code="1100" or op_code="1101") then
-		next_state <= "000010";
+		elsif (op_code="0001") then
+			 if(cz = "01") then
+				if(carry = '1') then
+					next_state<= "000010";
+				else 
+					next_state<= "000001";
+					end if;
+			 elsif(cz="10")	then
+				if(zero = '1') then
+					next_state <= "000010";
+				else
+					next_state <= "000001";
+					end if;
+		     else
+					next_state <= "000010";
+				end if;	
 				
+
+		
+      elsif(op_code="0000" or op_code="1000" or op_code="1100" or op_code="1101") then
+		next_state <= "000010";
+		
+		elsif( op_code="0010") then
+			 if(cz = "01") then
+				if(carry = '1') then
+					next_state<= "000010";
+				else 
+					next_state<= "000001";
+					end if;
+			 elsif(cz="10")	then
+				if(zero = '1') then
+					next_state <= "000010";
+				else
+					next_state <= "000001";
+					end if;
+		     else
+					next_state <= "000010";
+				end if;	
+		
+		
 		elsif (op_code="0011") then
 		next_state <= "000111";
 				 
@@ -318,6 +357,16 @@ begin
 		  when "101000"=> --s40
 		 if(op_code="0010") then
 			next_state <="000100";
+		 end if;
+		 
+	when "101001"=> --s40
+		 if(op_code="1000") then
+		  if(zero = '1') then
+			next_state <="100001";
+		  else
+		   next_state<= "000001";
+			end if;
+		 
 		 end if;
 
 			

@@ -24,14 +24,20 @@ begin
 	if (state = "000001") then
 		data_1 <= pc;
 		alu_a <= pc;
+	elsif (state="100001" or state="100110") then
+		 alu_a <=pc;
+	elsif (state="100010" or state="100011") then
+		reg_out<=pc;
 	end if;
  end process;
  
 regs_write: process(clk)
 begin
  if (falling_edge(clk)) then
-	if (state = "000001") then
+	if (state = "000001" or state="100001" or state="100101" or state="100110") then
 		pc <= alu_c;
+	elsif (state="100011") then
+		pc <= reg;
 	end if;
 end if;	
 end process;

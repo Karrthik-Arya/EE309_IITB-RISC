@@ -22,14 +22,14 @@ signal t1: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t1, state)
 	begin
-		if (state="000011" or state="000110" or state="001100" or state="010000") then
+		if (state="000011" or state="000110" or state="001100" or state="010000" or state="100101" or state="101000") then
 		alu <= t1;
 
 		elsif (state="001101") then
 			data_1 <= t1;
 		elsif(state="001011") then
 			reg_out <= t1;
-		elsif(state="001110")then
+		elsif(state="001110" or state="011001")then
 			mem_a<= t1;
 		end if;
 	end process;
@@ -37,7 +37,7 @@ begin
 	write_proc: process(clk)
 	begin 
 		if(falling_edge(clk)) then
-			if (state="000010" or state="001000") then
+			if (state="000010" or state="001000" or state="100100") then
 				t1 <= reg;
 			elsif (state="001010") then
 				t1 <= data_2;
@@ -71,13 +71,13 @@ signal t2: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t2, state)
 	begin
-		if (state="000011") then
+		if (state="000011" or state="101000") then
 		alu <= t2;
 
 		elsif (state="000101") then
 		shift1 <= t2;
 
-		elsif (state="001101") then
+		elsif (state="001101" or state = "011001") then
 		data_1 <= t2;
 		
 		elsif (state="010001" or state="010010" or state="001111" or state="010011" or state="010100" or state="010101" or state="010110" or state="010111") then
@@ -88,7 +88,7 @@ begin
 	write_proc: process(clk)
 	begin 
 		if(falling_edge(clk)) then
-		if (state="000010"  or state="001100") then
+		if (state="000010"  or state="001100" or state="011000" or state="011001" or state="011010" or state="011011" or state="011100" or state="011101" or state="011110" or state="011111" or state="100000") then
 			t2 <= reg_in;
 
 		elsif (state="001101" or state="001110") then
@@ -119,7 +119,7 @@ signal t3: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t3, state)
 	begin
-		if (state="000100") then
+		if (state="000100" or state="100111") then
 			reg <= t3;
 
 		elsif (state="001010" or state="001101") then
@@ -130,7 +130,7 @@ begin
 	write_proc: process(clk)
 	begin 
 		if(falling_edge(clk)) then
-		if (state="000011"or state="000101" or state="000110" or state="001100") then
+		if (state="000011"or state="000101" or state="000110" or state="001100" or state="101000") then
 			t3 <= alu;	
 		end if;
 		end if;

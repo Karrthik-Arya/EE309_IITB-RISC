@@ -34,17 +34,35 @@ begin
 	if (state = "000010") then
 		t1 <= regs(to_integer(unsigned(reg_a1)));
 		t2 <= regs(to_integer(unsigned(reg_a2)));
-	elsif (state="001000") then
+	elsif (state="001000" or state="100100") then
 		t1 <= regs(to_integer(unsigned(reg_a1)));
 	elsif (state="001100") then
 		t2 <= regs(to_integer(unsigned(reg_a1)));
+	elsif (state="011000") then
+		t2 <= regs(0);
+	elsif (state="011010") then
+		t2 <= regs(1);
+	elsif (state="011011") then
+		t2 <= regs(2);
+	elsif (state="011100") then
+		t2 <= regs(3);
+	elsif (state="011101") then
+		t2 <= regs(4);
+	elsif (state="011110") then
+		t2 <= regs(5);
+	elsif (state="011111") then
+		t2 <= regs(6);
+	elsif (state="100000") then
+		t2 <= regs(7);
+	elsif(state="100011") then
+		pc_out<= regs(to_integer(unsigned(reg_a2)));
 	end if;
  end process;
  
 regs_write: process(clk)
 begin
  if (falling_edge(clk)) then
-	if (state = "000100") then
+	if (state = "000100" or state="100111") then
 		regs(to_integer(unsigned(reg_a3)))<= t3;
 	elsif (state="000111") then
 		regs(to_integer(unsigned(reg_a3)))<= shift7;
@@ -66,6 +84,8 @@ begin
 		regs(6) <= t2_in;
 	elsif (state="010111") then	
 		regs(7) <= t2_in;
+	elsif (state="100010") then	
+		regs(to_integer(unsigned(reg_a1))) <= pc_in;
 	end if;
 	end if;
 end process;
