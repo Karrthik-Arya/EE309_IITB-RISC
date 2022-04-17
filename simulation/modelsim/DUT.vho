@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/17/2022 04:34:37"
+-- DATE "04/17/2022 13:19:12"
 
 -- 
 -- Device: Altera 5M2210ZF324I5 Package FBGA324

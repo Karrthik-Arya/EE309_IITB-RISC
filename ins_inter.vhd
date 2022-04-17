@@ -44,11 +44,12 @@ port(
 end ins_decoder;
 
 architecture working of ins_decoder is
+signal i:integer := 1;
+signal j:integer := 0;
 begin
-op_out<=op_code;
+op_out<=std_logic_vector(to_unsigned(i, 4));
 next_state_process: process(state)
-variable i:integer := 1;
-variable j:integer := 0;
+
 begin
 	case state is
 	when "111111"=>
@@ -227,7 +228,7 @@ begin
 	when "001110" => --s14
 		if(op_code="1100") then
 			
-			j:=i-1;
+			j<=i-1;
 				if(j=0)then
 				next_state<="001111";
 				elsif(j=1)then
@@ -253,16 +254,18 @@ begin
 		
 		when "010000" => --S16
 		if(op_code="1100") then
+			
 			if(imm(i)='1')then
+			i<=i+1;
 			next_state<="001110";
-			i:=i+1;
-			else
+			elsif(imm(i)='0') then
+			i<=i+1;
 			next_state<="010000";
-			i:=i+1;
+
 			end if;
 			
 			if(i>7)then	
-			i:=1;
+			i<=1;
 			end if;
 		elsif(op_code="1101")then
 			if(imm(i)='1')then
@@ -281,14 +284,14 @@ begin
 				elsif(i=7)then
 				next_state<="100000";
 				end if;
-			i:=i+1;
+			i<=i+1;
 			else
 			next_state<="010000";
-			i:=i+1;
+			i<=i+1;
 			end if;
 			
 			if(i>7)then	
-			i:=1;
+			i<=1;
 			end if;
 		end if;
 		
