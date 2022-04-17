@@ -47,7 +47,7 @@ architecture working of ins_decoder is
 signal i:integer := 1;
 signal j:integer := 0;
 begin
-op_out<=std_logic_vector(to_unsigned(i, 4));
+op_out<=op_code;
 next_state_process: process(state)
 
 begin

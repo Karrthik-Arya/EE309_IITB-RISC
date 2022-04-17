@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity DUT is
 port ( input_vector : in std_logic_vector(0 downto 0);
-			output_vector: out std_logic_vector(9 downto 0));
+			output_vector: out std_logic_vector(3 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
@@ -175,7 +175,6 @@ component alu is
 	 );
 	 end component;
 begin
-	output_vector(9 downto 4) <= state;
    stateTrans_instance: ins_decoder
 			port map (
 					next_state => next_state,

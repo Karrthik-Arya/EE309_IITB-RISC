@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sun Apr 17 13:19:08 2022
+Sun Apr 17 13:45:47 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,8 +16,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Analysis & Synthesis Messages
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Apr 17 13:19:08 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 13:45:47 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
 ; Total logic elements        ; 0                                           ;
-; Total pins                  ; 11                                          ;
+; Total pins                  ; 5                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -189,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 11    ;
+; I/O pins                                    ; 5     ;
 +---------------------------------------------+-------+
 
 
@@ -198,254 +197,246 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |DUT                       ; 0 (0)       ; 0            ; 0          ; 11   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 5    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+------------------------------------------+---------------------------------------------+
-; Register name                            ; Reason for Removal                          ;
-+------------------------------------------+---------------------------------------------+
-; ir:ir_instance|ir_store[0,1,8..11]       ; Stuck at GND due to stuck port data_in      ;
-; ins_setter:stateSet_instance|state[0..5] ; Stuck at GND due to stuck port data_in      ;
-; ir:ir_instance|ir_store[2..7]            ; Stuck at GND due to stuck port clock_enable ;
-; temp_3:t3_instance|t3[5..15]             ; Lost fanout                                 ;
-; pc:pc_instance|pc[5..15]                 ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[5][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[4][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[6][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[7][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][5]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][9]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][6]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][7]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][8]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][15]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][14]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][13]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][12]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][11]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[0][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][10]       ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][10]       ; Lost fanout                                 ;
-; pc:pc_instance|pc[0]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][0]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][0]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[1]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][1]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][1]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[2]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][2]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][2]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[3]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][3]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][3]        ; Lost fanout                                 ;
-; pc:pc_instance|pc[4]                     ; Stuck at GND due to stuck port clock_enable ;
-; registers:reg_instance|regs[0][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[1][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[2][4]        ; Lost fanout                                 ;
-; registers:reg_instance|regs[3][4]        ; Lost fanout                                 ;
-; temp_1:t1_instance|t1[5..15]             ; Lost fanout                                 ;
-; temp_2:t2_instance|t2[0..15]             ; Stuck at GND due to stuck port clock_enable ;
-; temp_1:t1_instance|t1[0..4]              ; Lost fanout                                 ;
-; temp_3:t3_instance|t3[0..4]              ; Lost fanout                                 ;
-; Total Number of Removed Registers = 210  ;                                             ;
-+------------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; ir:ir_instance|ir_store[0..11]           ; Stuck at GND due to stuck port data_in ;
+; pc:pc_instance|pc[0]                     ; Lost fanout                            ;
+; ins_setter:stateSet_instance|state[0..5] ; Lost fanout                            ;
+; pc:pc_instance|pc[1..4]                  ; Lost fanout                            ;
+; registers:reg_instance|regs[0][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][0]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][1]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][2]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][3]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][4]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][4]        ; Lost fanout                            ;
+; temp_1:t1_instance|t1[0..15]             ; Lost fanout                            ;
+; pc:pc_instance|pc[5..15]                 ; Lost fanout                            ;
+; temp_2:t2_instance|t2[0]                 ; Lost fanout                            ;
+; temp_3:t3_instance|t3[0]                 ; Lost fanout                            ;
+; temp_2:t2_instance|t2[1..15]             ; Lost fanout                            ;
+; temp_3:t3_instance|t3[1..4]              ; Lost fanout                            ;
+; registers:reg_instance|regs[0][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][15]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][14]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][13]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][12]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][11]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[1][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[2][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[3][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[4][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[5][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[6][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[7][10]       ; Lost fanout                            ;
+; registers:reg_instance|regs[0][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][9]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][8]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][7]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][6]        ; Lost fanout                            ;
+; registers:reg_instance|regs[0][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[1][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[2][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[3][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[4][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[5][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[6][5]        ; Lost fanout                            ;
+; registers:reg_instance|regs[7][5]        ; Lost fanout                            ;
+; temp_3:t3_instance|t3[5..15]             ; Lost fanout                            ;
+; Total Number of Removed Registers = 210  ;                                        ;
++------------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                               ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; Register name                         ; Reason for Removal             ; Registers Removed due to This Register                                           ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; ir:ir_instance|ir_store[8]            ; Stuck at GND                   ; temp_3:t3_instance|t3[15], registers:reg_instance|regs[4][13],                   ;
-;                                       ; due to stuck port data_in      ; registers:reg_instance|regs[7][13], registers:reg_instance|regs[4][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][12], registers:reg_instance|regs[4][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][11], registers:reg_instance|regs[4][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][10], registers:reg_instance|regs[4][9],           ;
-;                                       ;                                ; registers:reg_instance|regs[7][9], registers:reg_instance|regs[4][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][8], registers:reg_instance|regs[4][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][7], registers:reg_instance|regs[4][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][6], registers:reg_instance|regs[4][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][5], registers:reg_instance|regs[4][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][4], registers:reg_instance|regs[4][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][3], registers:reg_instance|regs[4][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][2], registers:reg_instance|regs[4][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][1], registers:reg_instance|regs[4][0],            ;
-;                                       ;                                ; registers:reg_instance|regs[7][0], registers:reg_instance|regs[4][14],           ;
-;                                       ;                                ; registers:reg_instance|regs[7][14], registers:reg_instance|regs[4][15],          ;
-;                                       ;                                ; registers:reg_instance|regs[7][15], registers:reg_instance|regs[0][5],           ;
-;                                       ;                                ; registers:reg_instance|regs[1][5], registers:reg_instance|regs[2][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][5], registers:reg_instance|regs[0][9],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][9], registers:reg_instance|regs[2][9],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][9], registers:reg_instance|regs[0][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][6], registers:reg_instance|regs[2][6],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][6], registers:reg_instance|regs[0][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][7], registers:reg_instance|regs[2][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][7], registers:reg_instance|regs[0][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[1][8], registers:reg_instance|regs[2][8],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][8], registers:reg_instance|regs[0][15],           ;
-;                                       ;                                ; registers:reg_instance|regs[1][15], registers:reg_instance|regs[2][15],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][15], registers:reg_instance|regs[0][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][14], registers:reg_instance|regs[2][14],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][14], registers:reg_instance|regs[0][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][13], registers:reg_instance|regs[2][13],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][13], registers:reg_instance|regs[0][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][12], registers:reg_instance|regs[2][12],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][12], registers:reg_instance|regs[0][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][11], registers:reg_instance|regs[2][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][11], registers:reg_instance|regs[0][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[1][10], registers:reg_instance|regs[2][10],          ;
-;                                       ;                                ; registers:reg_instance|regs[3][10], pc:pc_instance|pc[0],                        ;
-;                                       ;                                ; registers:reg_instance|regs[0][0], registers:reg_instance|regs[1][0],            ;
-;                                       ;                                ; registers:reg_instance|regs[2][0], registers:reg_instance|regs[3][0],            ;
-;                                       ;                                ; pc:pc_instance|pc[1], registers:reg_instance|regs[0][1],                         ;
-;                                       ;                                ; registers:reg_instance|regs[1][1], registers:reg_instance|regs[2][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][1], pc:pc_instance|pc[2],                         ;
-;                                       ;                                ; registers:reg_instance|regs[0][2], registers:reg_instance|regs[1][2],            ;
-;                                       ;                                ; registers:reg_instance|regs[2][2], registers:reg_instance|regs[3][2],            ;
-;                                       ;                                ; pc:pc_instance|pc[3], registers:reg_instance|regs[0][3],                         ;
-;                                       ;                                ; registers:reg_instance|regs[1][3], registers:reg_instance|regs[2][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[3][3], pc:pc_instance|pc[4],                         ;
-;                                       ;                                ; registers:reg_instance|regs[0][4], registers:reg_instance|regs[1][4],            ;
-;                                       ;                                ; registers:reg_instance|regs[2][4], registers:reg_instance|regs[3][4],            ;
-;                                       ;                                ; temp_2:t2_instance|t2[15], temp_2:t2_instance|t2[14], temp_2:t2_instance|t2[13], ;
-;                                       ;                                ; temp_2:t2_instance|t2[12], temp_2:t2_instance|t2[11], temp_2:t2_instance|t2[10], ;
-;                                       ;                                ; temp_2:t2_instance|t2[9], temp_2:t2_instance|t2[8], temp_2:t2_instance|t2[7],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[6], temp_2:t2_instance|t2[5], temp_2:t2_instance|t2[4],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[3], temp_2:t2_instance|t2[2], temp_2:t2_instance|t2[1],    ;
-;                                       ;                                ; temp_2:t2_instance|t2[0]                                                         ;
-; ins_setter:stateSet_instance|state[0] ; Stuck at GND                   ; temp_3:t3_instance|t3[12], temp_3:t3_instance|t3[11], temp_3:t3_instance|t3[10], ;
-;                                       ; due to stuck port data_in      ; temp_3:t3_instance|t3[9], temp_3:t3_instance|t3[6], temp_3:t3_instance|t3[5],    ;
-;                                       ;                                ; temp_1:t1_instance|t1[6], temp_1:t1_instance|t1[5], temp_1:t1_instance|t1[0],    ;
-;                                       ;                                ; temp_1:t1_instance|t1[1], temp_1:t1_instance|t1[2], temp_1:t1_instance|t1[3],    ;
-;                                       ;                                ; temp_1:t1_instance|t1[4], temp_3:t3_instance|t3[0], temp_3:t3_instance|t3[2],    ;
-;                                       ;                                ; temp_3:t3_instance|t3[3], temp_3:t3_instance|t3[4]                               ;
-; ir:ir_instance|ir_store[7]            ; Stuck at GND                   ; temp_3:t3_instance|t3[14], registers:reg_instance|regs[5][13],                   ;
-;                                       ; due to stuck port clock_enable ; registers:reg_instance|regs[5][12], registers:reg_instance|regs[5][11],          ;
-;                                       ;                                ; registers:reg_instance|regs[5][10], registers:reg_instance|regs[5][9],           ;
-;                                       ;                                ; registers:reg_instance|regs[5][8], registers:reg_instance|regs[5][7],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][6], registers:reg_instance|regs[5][5],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][4], registers:reg_instance|regs[5][3],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][2], registers:reg_instance|regs[5][1],            ;
-;                                       ;                                ; registers:reg_instance|regs[5][0], registers:reg_instance|regs[5][14],           ;
-;                                       ;                                ; registers:reg_instance|regs[5][15]                                               ;
-; ir:ir_instance|ir_store[1]            ; Stuck at GND                   ; temp_3:t3_instance|t3[8], pc:pc_instance|pc[14], pc:pc_instance|pc[8],           ;
-;                                       ; due to stuck port data_in      ; temp_1:t1_instance|t1[15], temp_1:t1_instance|t1[14], temp_1:t1_instance|t1[13], ;
-;                                       ;                                ; temp_1:t1_instance|t1[12], temp_1:t1_instance|t1[11], temp_1:t1_instance|t1[8]   ;
-; ir:ir_instance|ir_store[11]           ; Stuck at GND                   ; pc:pc_instance|pc[15], pc:pc_instance|pc[13], pc:pc_instance|pc[12],             ;
-;                                       ; due to stuck port data_in      ; pc:pc_instance|pc[11], pc:pc_instance|pc[10], pc:pc_instance|pc[9],              ;
-;                                       ;                                ; pc:pc_instance|pc[6], pc:pc_instance|pc[5]                                       ;
-; ir:ir_instance|ir_store[0]            ; Stuck at GND                   ; temp_3:t3_instance|t3[7], pc:pc_instance|pc[7], temp_1:t1_instance|t1[7]         ;
-;                                       ; due to stuck port data_in      ;                                                                                  ;
-; ir:ir_instance|ir_store[3]            ; Stuck at GND                   ; temp_1:t1_instance|t1[10]                                                        ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[2]            ; Stuck at GND                   ; temp_1:t1_instance|t1[9]                                                         ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-; ir:ir_instance|ir_store[6]            ; Stuck at GND                   ; temp_3:t3_instance|t3[13]                                                        ;
-;                                       ; due to stuck port clock_enable ;                                                                                  ;
-+---------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++-----------------------------+---------------------------+-----------------------------------------------------------------------------------------+
+; Register name               ; Reason for Removal        ; Registers Removed due to This Register                                                  ;
++-----------------------------+---------------------------+-----------------------------------------------------------------------------------------+
+; ir:ir_instance|ir_store[8]  ; Stuck at GND              ; ins_setter:stateSet_instance|state[0], ins_setter:stateSet_instance|state[1],           ;
+;                             ; due to stuck port data_in ; ins_setter:stateSet_instance|state[2], ins_setter:stateSet_instance|state[3],           ;
+;                             ;                           ; ins_setter:stateSet_instance|state[4], ins_setter:stateSet_instance|state[5],           ;
+;                             ;                           ; registers:reg_instance|regs[0][0], registers:reg_instance|regs[1][0],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][0], registers:reg_instance|regs[3][0],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][0], registers:reg_instance|regs[7][0],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][1], registers:reg_instance|regs[1][1],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][1], registers:reg_instance|regs[3][1],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][1], registers:reg_instance|regs[7][1],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][2], registers:reg_instance|regs[1][2],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][2], registers:reg_instance|regs[3][2],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][2], registers:reg_instance|regs[7][2],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][3], registers:reg_instance|regs[1][3],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][3], registers:reg_instance|regs[3][3],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][3], registers:reg_instance|regs[7][3],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][4], registers:reg_instance|regs[1][4],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][4], registers:reg_instance|regs[3][4],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][4], registers:reg_instance|regs[7][4],                   ;
+;                             ;                           ; temp_1:t1_instance|t1[15], temp_1:t1_instance|t1[14], temp_1:t1_instance|t1[13],        ;
+;                             ;                           ; temp_1:t1_instance|t1[12], temp_1:t1_instance|t1[11], temp_2:t2_instance|t2[0],         ;
+;                             ;                           ; temp_3:t3_instance|t3[0], temp_2:t2_instance|t2[4], temp_2:t2_instance|t2[3],           ;
+;                             ;                           ; temp_2:t2_instance|t2[2], temp_2:t2_instance|t2[1], temp_3:t3_instance|t3[1],           ;
+;                             ;                           ; temp_3:t3_instance|t3[2], temp_3:t3_instance|t3[3], temp_3:t3_instance|t3[4],           ;
+;                             ;                           ; registers:reg_instance|regs[0][15], registers:reg_instance|regs[1][15],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][15], registers:reg_instance|regs[3][15],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][15], registers:reg_instance|regs[7][15],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][14], registers:reg_instance|regs[1][14],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][14], registers:reg_instance|regs[3][14],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][14], registers:reg_instance|regs[7][14],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][13], registers:reg_instance|regs[1][13],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][13], registers:reg_instance|regs[3][13],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][13], registers:reg_instance|regs[7][13],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][12], registers:reg_instance|regs[1][12],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][12], registers:reg_instance|regs[3][12],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][12], registers:reg_instance|regs[7][12],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][11], registers:reg_instance|regs[1][11],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][11], registers:reg_instance|regs[3][11],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][11], registers:reg_instance|regs[7][11],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][10], registers:reg_instance|regs[1][10],                 ;
+;                             ;                           ; registers:reg_instance|regs[2][10], registers:reg_instance|regs[3][10],                 ;
+;                             ;                           ; registers:reg_instance|regs[4][10], registers:reg_instance|regs[7][10],                 ;
+;                             ;                           ; registers:reg_instance|regs[0][9], registers:reg_instance|regs[1][9],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][9], registers:reg_instance|regs[3][9],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][9], registers:reg_instance|regs[7][9],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][8], registers:reg_instance|regs[1][8],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][8], registers:reg_instance|regs[3][8],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][8], registers:reg_instance|regs[7][8],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][7], registers:reg_instance|regs[1][7],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][7], registers:reg_instance|regs[3][7],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][7], registers:reg_instance|regs[7][7],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][6], registers:reg_instance|regs[1][6],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][6], registers:reg_instance|regs[3][6],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][6], registers:reg_instance|regs[7][6],                   ;
+;                             ;                           ; registers:reg_instance|regs[0][5], registers:reg_instance|regs[1][5],                   ;
+;                             ;                           ; registers:reg_instance|regs[2][5], registers:reg_instance|regs[3][5],                   ;
+;                             ;                           ; registers:reg_instance|regs[4][5], registers:reg_instance|regs[7][5],                   ;
+;                             ;                           ; temp_3:t3_instance|t3[15], temp_3:t3_instance|t3[12], temp_3:t3_instance|t3[11],        ;
+;                             ;                           ; temp_3:t3_instance|t3[10], temp_3:t3_instance|t3[6], temp_3:t3_instance|t3[5]           ;
+; ir:ir_instance|ir_store[11] ; Stuck at GND              ; pc:pc_instance|pc[0], pc:pc_instance|pc[1], pc:pc_instance|pc[2], pc:pc_instance|pc[3], ;
+;                             ; due to stuck port data_in ; pc:pc_instance|pc[4], temp_1:t1_instance|t1[4], temp_1:t1_instance|t1[3],               ;
+;                             ;                           ; temp_1:t1_instance|t1[2], temp_1:t1_instance|t1[1], temp_1:t1_instance|t1[0],           ;
+;                             ;                           ; pc:pc_instance|pc[15], pc:pc_instance|pc[14], pc:pc_instance|pc[13],                    ;
+;                             ;                           ; pc:pc_instance|pc[12], pc:pc_instance|pc[11], pc:pc_instance|pc[10],                    ;
+;                             ;                           ; pc:pc_instance|pc[9], pc:pc_instance|pc[8], pc:pc_instance|pc[7], pc:pc_instance|pc[6], ;
+;                             ;                           ; pc:pc_instance|pc[5]                                                                    ;
+; ir:ir_instance|ir_store[2]  ; Stuck at GND              ; temp_1:t1_instance|t1[9], temp_2:t2_instance|t2[9], temp_3:t3_instance|t3[9]            ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[1]  ; Stuck at GND              ; temp_1:t1_instance|t1[8], temp_2:t2_instance|t2[8], temp_3:t3_instance|t3[8]            ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[0]  ; Stuck at GND              ; temp_1:t1_instance|t1[7], temp_2:t2_instance|t2[7], temp_3:t3_instance|t3[7]            ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[3]  ; Stuck at GND              ; temp_1:t1_instance|t1[10], temp_2:t2_instance|t2[10]                                    ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[7]  ; Stuck at GND              ; temp_3:t3_instance|t3[14]                                                               ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[6]  ; Stuck at GND              ; temp_3:t3_instance|t3[13]                                                               ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[5]  ; Stuck at GND              ; temp_2:t2_instance|t2[12]                                                               ;
+;                             ; due to stuck port data_in ;                                                                                         ;
+; ir:ir_instance|ir_store[4]  ; Stuck at GND              ; temp_2:t2_instance|t2[11]                                                               ;
+;                             ; due to stuck port data_in ;                                                                                         ;
++-----------------------------+---------------------------+-----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -463,49 +454,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|pc:pc_instance|pc[4]                  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DUT|temp_2:t2_instance|t2[13]             ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|temp_1:t1_instance|t1[4]              ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[4][15]    ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[4][9]     ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[5][15]    ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[5][13]    ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[6][5]     ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[6][14]    ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[7][15]    ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[7][11]    ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[1][1]     ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[1][11]    ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[2][1]     ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[2][14]    ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[3][6]     ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[3][14]    ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[0][5]     ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DUT|registers:reg_instance|regs[0][14]    ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |DUT|registers:reg_instance|regs[0][0]     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|registers:reg_instance|Mux7           ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|registers:reg_instance|Mux28          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DUT|ir:ir_instance|reg_3[0]               ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|pc_out[13]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |DUT|registers:reg_instance|regs           ;
-; 33:1               ; 16 bits   ; 352 LEs       ; 96 LEs               ; 256 LEs                ; No         ; |DUT|registers:reg_instance|t2[0]          ;
-; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |DUT|ins_decoder:stateTrans_instance|Mux57 ;
-; 7:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DUT|alu:alu_instance|t3[10]               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 17 13:18:58 2022
+    Info: Processing started: Sun Apr 17 13:45:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iitb-risc -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -553,7 +508,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12023): Found entity 1: ir File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 5
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at DUT.vhd(12): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 12
-Info (12128): Elaborating entity "ins_decoder" for hierarchy "ins_decoder:stateTrans_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 179
+Info (12128): Elaborating entity "ins_decoder" for hierarchy "ins_decoder:stateTrans_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 178
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(58): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 58
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(61): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 61
 Warning (10492): VHDL Process Statement warning at ins_inter.vhd(62): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 62
@@ -712,8 +667,8 @@ Info (10041): Inferred latch for "next_state[2]" at ins_inter.vhd(51) File: /hom
 Info (10041): Inferred latch for "next_state[3]" at ins_inter.vhd(51) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Info (10041): Inferred latch for "next_state[4]" at ins_inter.vhd(51) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Info (10041): Inferred latch for "next_state[5]" at ins_inter.vhd(51) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Info (12128): Elaborating entity "ins_setter" for hierarchy "ins_setter:stateSet_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 191
-Info (12128): Elaborating entity "ir" for hierarchy "ir:ir_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 199
+Info (12128): Elaborating entity "ins_setter" for hierarchy "ins_setter:stateSet_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 190
+Info (12128): Elaborating entity "ir" for hierarchy "ir:ir_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 198
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "reg_2", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Warning (10631): VHDL Process Statement warning at ir.vhd(30): inferring latch(es) for signal or variable "sign_ex", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
@@ -743,27 +698,27 @@ Info (10041): Inferred latch for "reg_2[2]" at ir.vhd(30) File: /home/winston/Do
 Info (10041): Inferred latch for "reg_1[0]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Info (10041): Inferred latch for "reg_1[1]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
 Info (10041): Inferred latch for "reg_1[2]" at ir.vhd(30) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd Line: 30
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at mem.vhd(57): signal "mem_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at mem.vhd(59): signal "mem_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at mem.vhd(54): inferring latch(es) for signal or variable "data_2", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[0]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[1]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[2]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[3]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[4]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[5]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[6]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[7]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[8]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[9]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[10]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[11]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[12]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[13]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[14]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (10041): Inferred latch for "data_2[15]" at mem.vhd(54) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 54
-Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 224
+Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 210
+Warning (10492): VHDL Process Statement warning at mem.vhd(56): signal "mem_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at mem.vhd(58): signal "mem_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 58
+Warning (10631): VHDL Process Statement warning at mem.vhd(53): inferring latch(es) for signal or variable "data_2", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[0]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[1]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[2]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[3]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[4]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[5]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[6]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[7]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[8]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[9]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[10]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[11]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[12]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[13]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[14]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (10041): Inferred latch for "data_2[15]" at mem.vhd(53) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd Line: 53
+Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 223
 Warning (10492): VHDL Process Statement warning at regs.vhd(35): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 35
 Warning (10492): VHDL Process Statement warning at regs.vhd(36): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 36
 Warning (10492): VHDL Process Statement warning at regs.vhd(38): signal "regs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 38
@@ -828,7 +783,7 @@ Info (10041): Inferred latch for "t1[12]" at regs.vhd(32) File: /home/winston/Do
 Info (10041): Inferred latch for "t1[13]" at regs.vhd(32) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
 Info (10041): Inferred latch for "t1[14]" at regs.vhd(32) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
 Info (10041): Inferred latch for "t1[15]" at regs.vhd(32) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Info (12128): Elaborating entity "temp_1" for hierarchy "temp_1:t1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 241
+Info (12128): Elaborating entity "temp_1" for hierarchy "temp_1:t1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 240
 Warning (10631): VHDL Process Statement warning at temps.vhd(23): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Warning (10631): VHDL Process Statement warning at temps.vhd(23): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Warning (10631): VHDL Process Statement warning at temps.vhd(23): inferring latch(es) for signal or variable "reg_out", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
@@ -897,7 +852,7 @@ Info (10041): Inferred latch for "alu[12]" at temps.vhd(23) File: /home/winston/
 Info (10041): Inferred latch for "alu[13]" at temps.vhd(23) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Info (10041): Inferred latch for "alu[14]" at temps.vhd(23) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
 Info (10041): Inferred latch for "alu[15]" at temps.vhd(23) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Info (12128): Elaborating entity "temp_2" for hierarchy "temp_2:t2_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 255
+Info (12128): Elaborating entity "temp_2" for hierarchy "temp_2:t2_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 254
 Warning (10631): VHDL Process Statement warning at temps.vhd(72): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at temps.vhd(72): inferring latch(es) for signal or variable "shift1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at temps.vhd(72): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
@@ -966,7 +921,7 @@ Info (10041): Inferred latch for "alu[12]" at temps.vhd(72) File: /home/winston/
 Info (10041): Inferred latch for "alu[13]" at temps.vhd(72) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Info (10041): Inferred latch for "alu[14]" at temps.vhd(72) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
 Info (10041): Inferred latch for "alu[15]" at temps.vhd(72) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Info (12128): Elaborating entity "temp_3" for hierarchy "temp_3:t3_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 267
+Info (12128): Elaborating entity "temp_3" for hierarchy "temp_3:t3_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 266
 Warning (10631): VHDL Process Statement warning at temps.vhd(120): inferring latch(es) for signal or variable "reg", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Warning (10631): VHDL Process Statement warning at temps.vhd(120): inferring latch(es) for signal or variable "data_1", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Info (10041): Inferred latch for "data_1[0]" at temps.vhd(120) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
@@ -1001,7 +956,7 @@ Info (10041): Inferred latch for "reg[12]" at temps.vhd(120) File: /home/winston
 Info (10041): Inferred latch for "reg[13]" at temps.vhd(120) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Info (10041): Inferred latch for "reg[14]" at temps.vhd(120) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
 Info (10041): Inferred latch for "reg[15]" at temps.vhd(120) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 276
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 275
 Warning (10492): VHDL Process Statement warning at alu.vhd(77): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 77
 Warning (10492): VHDL Process Statement warning at alu.vhd(89): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 89
 Warning (10492): VHDL Process Statement warning at alu.vhd(105): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 105
@@ -1061,7 +1016,7 @@ Info (10041): Inferred latch for "t3[13]" at alu.vhd(28) File: /home/winston/Doc
 Info (10041): Inferred latch for "t3[14]" at alu.vhd(28) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
 Info (10041): Inferred latch for "t3[15]" at alu.vhd(28) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
 Info (10041): Inferred latch for "carry" at alu.vhd(28) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 292
+Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 291
 Warning (10492): VHDL Process Statement warning at pc.vhdl(25): signal "pc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 25
 Warning (10492): VHDL Process Statement warning at pc.vhdl(26): signal "pc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 26
 Warning (10492): VHDL Process Statement warning at pc.vhdl(28): signal "pc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 28
@@ -1117,7 +1072,7 @@ Info (10041): Inferred latch for "data_1[12]" at pc.vhdl(22) File: /home/winston
 Info (10041): Inferred latch for "data_1[13]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Info (10041): Inferred latch for "data_1[14]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
 Info (10041): Inferred latch for "data_1[15]" at pc.vhdl(22) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Info (12128): Elaborating entity "shifter_1" for hierarchy "shifter_1:shift1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 303
+Info (12128): Elaborating entity "shifter_1" for hierarchy "shifter_1:shift1_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 302
 Warning (10492): VHDL Process Statement warning at shifter_1.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 19
 Warning (10631): VHDL Process Statement warning at shifter_1.vhdl(16): inferring latch(es) for signal or variable "alu_a", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[0]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
@@ -1136,7 +1091,7 @@ Info (10041): Inferred latch for "alu_a[12]" at shifter_1.vhdl(16) File: /home/w
 Info (10041): Inferred latch for "alu_a[13]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[14]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
 Info (10041): Inferred latch for "alu_a[15]" at shifter_1.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Info (12128): Elaborating entity "shifter_7" for hierarchy "shifter_7:shift7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 310
+Info (12128): Elaborating entity "shifter_7" for hierarchy "shifter_7:shift7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 309
 Warning (10492): VHDL Process Statement warning at shifter_7.vhdl(19): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 19
 Warning (10631): VHDL Process Statement warning at shifter_7.vhdl(16): inferring latch(es) for signal or variable "rf_d3", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[0]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
@@ -1155,7 +1110,7 @@ Info (10041): Inferred latch for "rf_d3[12]" at shifter_7.vhdl(16) File: /home/w
 Info (10041): Inferred latch for "rf_d3[13]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[14]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
 Info (10041): Inferred latch for "rf_d3[15]" at shifter_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_10_component" for hierarchy "sign_extender_10_component:sign_ex10_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 317
+Info (12128): Elaborating entity "sign_extender_10_component" for hierarchy "sign_extender_10_component:sign_ex10_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 316
 Warning (10631): VHDL Process Statement warning at sign_extender_10.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[0]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[1]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
@@ -1173,7 +1128,7 @@ Info (10041): Inferred latch for "alu[12]" at sign_extender_10.vhdl(16) File: /h
 Info (10041): Inferred latch for "alu[13]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[14]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
 Info (10041): Inferred latch for "alu[15]" at sign_extender_10.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Info (12128): Elaborating entity "sign_extender_7_component" for hierarchy "sign_extender_7_component:sign_ex7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 324
+Info (12128): Elaborating entity "sign_extender_7_component" for hierarchy "sign_extender_7_component:sign_ex7_instance" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 323
 Warning (10631): VHDL Process Statement warning at sign_extender_7.vhdl(16): inferring latch(es) for signal or variable "alu", which holds its previous value in one or more paths through the process File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[0]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[1]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
@@ -1191,162 +1146,6 @@ Info (10041): Inferred latch for "alu[12]" at sign_extender_7.vhdl(16) File: /ho
 Info (10041): Inferred latch for "alu[13]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[14]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
 Info (10041): Inferred latch for "alu[15]" at sign_extender_7.vhdl(16) File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_7_component:sign_ex7_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl Line: 16
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "registers:reg_instance|pc_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd Line: 32
-Warning (14025): LATCH primitive "alu:alu_instance|pc_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd Line: 28
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|reg_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|reg_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|reg_out[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_3:t3_instance|reg[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 120
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "pc:pc_instance|data_1[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl Line: 22
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_2:t2_instance|alu[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 72
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14025): LATCH primitive "temp_1:t1_instance|alu[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd Line: 23
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[15]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[14]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[13]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[12]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[11]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[10]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[9]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[8]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[7]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[6]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[5]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[4]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[3]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[2]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14026): LATCH primitive "shifter_1:shift1_instance|alu_a[1]" is permanently enabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "sign_extender_10_component:sign_ex10_instance|alu[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl Line: 16
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[31]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[30]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[29]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[28]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[27]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[26]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[25]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[24]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[23]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[22]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[21]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[20]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[19]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[18]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[17]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[16]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
-Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
@@ -1355,27 +1154,77 @@ Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[7]" is perma
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[16]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[17]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[18]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[19]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[20]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[21]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[22]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[23]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[24]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[25]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[26]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[27]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[28]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[29]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[30]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[31]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|i[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[0]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[1]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[2]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[3]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[4]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[5]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[6]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[7]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[8]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[9]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[10]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[11]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[12]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[13]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[14]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[15]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[16]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[17]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[18]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[19]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[20]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[21]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[22]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[23]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[24]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[25]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[26]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[27]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[28]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[29]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[30]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
+Warning (14025): LATCH primitive "ins_decoder:stateTrans_instance|j[31]" is permanently disabled File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd Line: 51
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "output_vector[0]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[1]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[2]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
     Warning (13410): Pin "output_vector[3]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[4]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[5]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[6]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[7]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[8]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-    Warning (13410): Pin "output_vector[9]" is stuck at GND File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 5
-Info (17049): 171 registers lost all their fanouts during netlist optimizations.
+Info (17049): 198 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "input_vector[0]" File: /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd Line: 4
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 323 warnings
-    Info: Peak virtual memory: 408 megabytes
-    Info: Processing ended: Sun Apr 17 13:19:08 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21059): Implemented 4 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 217 warnings
+    Info: Peak virtual memory: 407 megabytes
+    Info: Processing ended: Sun Apr 17 13:45:47 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:24
 
 
