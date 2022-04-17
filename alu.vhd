@@ -20,8 +20,8 @@ entity alu is
 	 end entity;
 	 
 architecture working of alu is
-signal carry: std_logic;
-signal zero: std_logic;
+signal carry: std_logic:='0';
+signal zero: std_logic:='0';
 begin
 	carry_out <= carry;
 	zero_out<= zero;
