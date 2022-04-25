@@ -39,7 +39,8 @@ port(
 		  imm: in std_logic_vector(8 downto 0);
 		  op_out: out std_logic_vector(3 downto 0);
 		  carry: in std_logic;
-		  zero: in std_logic
+		  zero: in std_logic;
+		  test_out: out std_logic_vector(0 downto 0)
 		  );
 end ins_decoder;
 
@@ -47,7 +48,7 @@ architecture working of ins_decoder is
 signal i:integer := 1;
 signal j:integer := 0;
 begin
-op_out<=op_code;
+test_out<=std_logic_vector(to_unsigned(i,1));
 next_state_process: process(state)
 
 begin
@@ -229,7 +230,15 @@ begin
 		if(op_code="1100") then
 			
 			j<=i-1;
-				if(j=0)then
+			next_state<="110000";
+			--j:=j+1;		
+		--	if(j>7) then
+			--j:=0;
+			--end if;
+		end if;
+		
+	when "110000" =>
+		if(j=0)then
 				next_state<="001111";
 				elsif(j=1)then
 				next_state<="010001";
@@ -246,16 +255,12 @@ begin
 				elsif(j=7)then
 				next_state<="010111";
 				end if;
-			--j:=j+1;		
-		--	if(j>7) then
-			--j:=0;
-			--end if;
-		end if;
-		
-		when "010000" => --S16
+		when "111001" =>
 		if(op_code="1100") then
-			
-			if(imm(i)='1')then
+			if(i>7)then	
+			i<=1;
+			next_state<="000001";
+			elsif(imm(i)='1')then
 			i<=i+1;
 			next_state<="001110";
 			elsif(imm(i)='0') then
@@ -263,12 +268,11 @@ begin
 			next_state<="010000";
 
 			end if;
-			
-			if(i>7)then	
-			i<=1;
-			end if;
 		elsif(op_code="1101")then
-			if(imm(i)='1')then
+			if (i>7) then
+			i<=1;
+				next_state<="000001";
+			elsif(imm(i)='1')then
 				if(i=1)then
 				next_state<="011010";
 				elsif(i=2)then
@@ -289,9 +293,44 @@ begin
 			next_state<="010000";
 			i<=i+1;
 			end if;
-			
+		end if;
+		
+		when "010000" => --S16
+		if(op_code="1100") then
 			if(i>7)then	
 			i<=1;
+			next_state<="000001";
+			elsif(imm(i)='1')then
+			i<=i+1;
+			next_state<="001110";
+			elsif(imm(i)='0') then
+			i<=i+1;
+			next_state<="111001";
+			end if;
+		elsif(op_code="1101")then
+			if (i>7) then
+			i<=1;
+				next_state<="000001";
+			elsif(imm(i)='1')then
+				if(i=1)then
+				next_state<="011010";
+				elsif(i=2)then
+				next_state<="011011";
+				elsif(i=3)then
+				next_state<="011100";
+				elsif(i=4)then
+				next_state<="011101";
+				elsif(i=5)then
+				next_state<="011110";
+				elsif(i=6)then
+				next_state<="011111";
+				elsif(i=7)then
+				next_state<="100000";
+				end if;
+			i<=i+1;
+			else
+			next_state<="111001";
+			i<=i+1;
 			end if;
 		end if;
 		

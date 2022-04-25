@@ -132,7 +132,7 @@ begin
 		temp := to_integer(unsigned(pc_in)) -1;
 		pc_out <= std_logic_vector(to_unsigned(temp,16));
 		
-	elsif(state="010000") then 
+	elsif(state="010000"or state="111001") then 
 		temp := to_integer(unsigned(t1)) +1;
 		t1_out <= std_logic_vector(to_unsigned(temp,16));
 		

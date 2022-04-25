@@ -22,7 +22,7 @@ signal t1: std_logic_vector(15 downto 0);
 begin
 	read_proc: process(t1, state)
 	begin
-		if (state="000011" or state="101001" or state="000101" or state="000110" or state="001100" or state="010000" or state="100101" or state="101000") then
+		if (state="000011" or state="101001" or state="000101" or state="000110" or state="001100" or state="010000" or state="111001" or state="100101" or state="101000") then
 		alu <= t1;
 
 		elsif (state="001101") then
@@ -41,7 +41,7 @@ begin
 				t1 <= reg;
 			elsif (state="001010") then
 				t1 <= data_2;
-			elsif(state="010000") then
+			elsif(state="010000" or state="111001") then
 				t1 <= alu_in;
 			end if;
 		end if;

@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity DUT is
 port ( input_vector : in std_logic_vector(0 downto 0);
-			output_vector: out std_logic_vector(3 downto 0));
+			output_vector: out std_logic_vector(6 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
@@ -23,7 +23,8 @@ architecture DutWrap of DUT is
 		  imm: in std_logic_vector(8 downto 0);
 		  op_out: out std_logic_vector(3 downto 0);
 		  carry: in std_logic;
-		  zero: in std_logic
+		  zero: in std_logic;
+		  test_out: out std_logic_vector(0 downto 0)
 		  );
    end component;
 	
@@ -175,6 +176,7 @@ component alu is
 	 );
 	 end component;
 begin
+	output_vector(5 downto 0) <= state;
    stateTrans_instance: ins_decoder
 			port map (
 					next_state => next_state,
@@ -182,9 +184,9 @@ begin
 					op_code => curr_ins(15 downto 12),
  					cz => curr_ins(1 downto 0),
 					imm => curr_ins(8 downto 0),
-					op_out => output_vector(3 downto 0),
 					carry=> carry,
-					zero=> zero
+					zero=> zero,
+					test_out=>output_vector(6 downto 6)
  					);
 					
 	stateSet_instance: ins_setter

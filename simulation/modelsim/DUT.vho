@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/17/2022 23:23:03"
+-- DATE "04/26/2022 03:27:08"
 
 -- 
 -- Device: Altera 5M2210ZF324I5 Package FBGA324
@@ -35,7 +35,7 @@ USE MAXV.MAXV_COMPONENTS.ALL;
 ENTITY 	DUT IS
     PORT (
 	input_vector : IN std_logic_vector(0 DOWNTO 0);
-	output_vector : BUFFER std_logic_vector(3 DOWNTO 0)
+	output_vector : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END DUT;
 
@@ -53,7 +53,7 @@ SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_input_vector : std_logic_vector(0 DOWNTO 0);
-SIGNAL ww_output_vector : std_logic_vector(3 DOWNTO 0);
+SIGNAL ww_output_vector : std_logic_vector(6 DOWNTO 0);
 
 BEGIN
 
@@ -63,7 +63,7 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
--- Location: PIN_H4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[0]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -74,7 +74,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_output_vector(0));
 
--- Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[1]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -85,7 +85,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_output_vector(1));
 
--- Location: PIN_F16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[2]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -96,7 +96,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_output_vector(2));
 
--- Location: PIN_D10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_T11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[3]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -107,7 +107,40 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_output_vector(3));
 
--- Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_H13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\output_vector[4]~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => GND,
+	oe => VCC,
+	padio => ww_output_vector(4));
+
+-- Location: PIN_J3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\output_vector[5]~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => GND,
+	oe => VCC,
+	padio => ww_output_vector(5));
+
+-- Location: PIN_P16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\output_vector[6]~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => GND,
+	oe => VCC,
+	padio => ww_output_vector(6));
+
+-- Location: PIN_P1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \input_vector[0]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
