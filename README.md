@@ -1,8 +1,10 @@
+# EE309-IITB-RISC
+
 This project was made by
--- Karrthik Arya   200020068
--- Kaishva Shah    200020066
--- Ronil Mandavia  20D180020
--- Siddhant Das    20D070075
+- Karrthik Arya   200020068
+- Kaishva Shah    200020066
+- Ronil Mandavia  20D180020
+- Siddhant Das    20D070075
 
 IITB-RISC-22 is a 16-bit microprocessor having 64 bytes of data memory and 64 bytes of instruction memory.
 instructions can be given to the processor using the memory.vhd file in which the instructions can be 
