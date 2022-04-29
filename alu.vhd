@@ -31,11 +31,12 @@ begin
 	 if (state="000011") then
 		 --add
 		 temp := to_integer(unsigned(t1)) + to_integer(unsigned(t2));
-		 if (temp>65535) then
+		 if (temp>65536) then
 			carry <= '1';
 			t3 <= std_logic_vector(to_unsigned(temp-65535,16));
-			if(temp=65535) then
+			if(temp=65536) then
 				zero <='1';
+                                carry <= '1';  
 			else
 				zero <='0';
 			end if;	
