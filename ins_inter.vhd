@@ -346,7 +346,7 @@ begin
 			end if;	
 			
 		when "011001"=> --s25
-		 if(op_code="1101" and imm(7)='1') then
+		 if(op_code="1101" and imm(i)='1' and i=7) then
 			next_state <="000001";
 		 else
 			next_state <="010000";

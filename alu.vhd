@@ -34,7 +34,6 @@ begin
 		 if (temp>=65536) then
 			carry <= '1';
 			t3 <= std_logic_vector(to_unsigned(temp-65536,16));
-			end if;	
 		else
 			carry <= '0';
 			t3 <= std_logic_vector(to_unsigned(temp,16));

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/simulation/modelsim
 Ealu
-Z1 w1651935969
+Z1 w1651943905
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
@@ -24,9 +24,9 @@ VOc2Gmdl1ok;ceHDZF1Ji40
 !s100 h6;HGcM5WB>fCe@eG=R@_0
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1651936205
+Z8 !s110 1651945518
 !i10b 1
-Z9 !s108 1651936205.000000
+Z9 !s108 1651945517.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd|
 Z11 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/alu.vhd|
 !i113 1
@@ -39,9 +39,9 @@ R4
 DEx4 work 3 alu 0 22 Oc2Gmdl1ok;ceHDZF1Ji40
 !i122 9
 l25
-L22 127
-V35heBch]NJ]3kgRUbML9J1
-!s100 miO2HHih?GF_4GM<MMWKS1
+L22 122
+VHa;B9gBRAj<QK21;10=AW1
+!s100 EcRCge1iX9GmH:V]3Ozke3
 R7
 31
 R8
@@ -66,11 +66,11 @@ V3_B^:RkA3:FEmU6f;T=N32
 !s100 ln8@=fOcCTe4^Qo3HCP0>2
 R7
 31
-R8
+Z17 !s110 1651945517
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd|
-Z18 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd|
+Z18 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd|
+Z19 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/DUT.vhd|
 !i113 1
 R12
 R13
@@ -85,34 +85,34 @@ VT>=9O>]]SH4B<4Qf?cM6L2
 !s100 MLS<MCbDi4TAO<AhQ3i990
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R17
 R18
+R19
 !i113 1
 R12
 R13
 Eins_decoder
-Z19 w1651936175
+Z20 w1651945467
 R2
 R3
 R4
 !i122 5
 R0
-Z20 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd
-Z21 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd
+Z21 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd
+Z22 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd
 l0
 L33 1
 VOciO?8OBUZ=NOPWGka40;2
 !s100 DWgZbm@:B5lM4?Hz2KTkm1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z22 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd|
-Z23 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd|
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd|
+Z24 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ins_inter.vhd|
 !i113 1
 R12
 R13
@@ -124,38 +124,38 @@ DEx4 work 11 ins_decoder 0 22 OciO?8OBUZ=NOPWGka40;2
 !i122 5
 l50
 L47 377
-V0`@]KnCjI>>J2f0MX^P<X2
-!s100 LTADaNH;OH^[09XiTG05U2
+Vakb`^L:O9k43dBkc<6g<13
+!s100 YTzc<MGh;5i:`h2gMfjmL3
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R22
 R23
+R24
 !i113 1
 R12
 R13
 Eins_setter
-R19
+R20
 R2
 R3
 R4
 !i122 5
 R0
-R20
 R21
+R22
 l0
 L6 1
 V5^<a=mDMn^hXGkeRRbhmE3
 !s100 ;F3Whgf=M3E?d4Q_GlFY73
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R22
 R23
+R24
 !i113 1
 R12
 R13
@@ -171,23 +171,23 @@ VHX]VMjAYil@aELXYj0NXe0
 !s100 H81ckjOSzdk>]W[U:?4VW1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R22
 R23
+R24
 !i113 1
 R12
 R13
 Eir
-Z24 w1650139159
+Z25 w1650139159
 R2
 R3
 R4
 !i122 11
 R0
-Z25 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd
-Z26 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd
+Z26 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd
+Z27 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd
 l0
 L5 1
 VFQXLo^n9UE_O5MRO5X_O[0
@@ -196,9 +196,9 @@ R7
 31
 R8
 !i10b 1
-R9
-Z27 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd|
-Z28 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd|
+Z28 !s108 1651945518.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd|
+Z30 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/ir.vhd|
 !i113 1
 R12
 R13
@@ -216,32 +216,32 @@ R7
 31
 R8
 !i10b 1
-R9
-R27
 R28
+R29
+R30
 !i113 1
 R12
 R13
 Emem
-Z29 w1651936122
+Z31 w1651945027
 R2
 R3
 R4
 !i122 7
 R0
-Z30 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd
-Z31 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd
+Z32 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd
+Z33 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd
 l0
 L5 1
 VRePbDHeeUU25nLdgm2jPJ0
 !s100 iMLG[G?34@BCFl[P=^LEO1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z32 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd|
-Z33 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd|
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd|
+Z35 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/mem.vhd|
 !i113 1
 R12
 R13
@@ -253,38 +253,38 @@ DEx4 work 3 mem 0 22 RePbDHeeUU25nLdgm2jPJ0
 !i122 7
 l42
 L18 45
-VE]2gSQ<[RSnPH?gdgD9VD2
-!s100 2YEHbKU?=h=i5EIB7zmS21
+V1Zg0B7ckbk2YZ_;XzY`Mg0
+!s100 ^hK@0SOcZcoO^>fL[V]AL0
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R32
-R33
+R34
+R35
 !i113 1
 R12
 R13
 Epc
-Z34 w1650139054
+Z36 w1650139054
 R2
 R3
 R4
 !i122 4
 R0
-Z35 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl
-Z36 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl
+Z37 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl
+Z38 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl
 l0
 L7 1
 Vkb:;S2COiBl3cVY3B[SL?0
 !s100 Kn2Yn_2eL^JH2T]X>WPQH1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z37 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl|
-Z38 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl|
+Z39 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl|
+Z40 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/pc.vhdl|
 !i113 1
 R12
 R13
@@ -300,34 +300,34 @@ V_=8T<iHD6Y5[JmbV^GiB>3
 !s100 fiBTm4dVGYIQB3flBkU`I1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R37
-R38
+R39
+R40
 !i113 1
 R12
 R13
 Eregisters
-Z39 w1651935812
+Z41 w1651945101
 R2
 R3
 R4
 !i122 8
 R0
-Z40 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd
-Z41 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd
+Z42 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd
+Z43 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd
 l0
 L7 1
 Vi06g3JRE4;J<UGTib_86=3
 !s100 6dW[_7e6P350zWo8=JKiF0
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z42 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd|
-Z43 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd|
+Z44 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd|
+Z45 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/regs.vhd|
 !i113 1
 R12
 R13
@@ -339,38 +339,38 @@ DEx4 work 9 registers 0 22 i06g3JRE4;J<UGTib_86=3
 !i122 8
 l30
 L24 70
-VdSS68Rg0[nV2>l<FVKSgh3
-!s100 XGklMkjI<AOgMgIMCdn221
+VRKCO8TDHn;VSn`?InG:b;1
+!s100 2hFM3473L>CLA:5O8[dCV1
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R42
-R43
+R44
+R45
 !i113 1
 R12
 R13
 Eshifter_1
-Z44 w1650102573
+Z46 w1650102573
 R2
 R3
 R4
 !i122 3
 R0
-Z45 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl
-Z46 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl
+Z47 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl
+Z48 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl
 l0
 L7 1
 VejK8e=UHJ6i>9cRa[IMGH3
 !s100 bczPa]QmF?UajI5Nlc7dO2
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z47 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl|
-Z48 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl|
+Z49 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl|
+Z50 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_1.vhdl|
 !i113 1
 R12
 R13
@@ -381,39 +381,39 @@ R4
 DEx4 work 9 shifter_1 0 22 ejK8e=UHJ6i>9cRa[IMGH3
 !i122 3
 l15
-Z49 L14 13
+Z51 L14 13
 VW=7BLFhVhNW2mJgb6b72V3
 !s100 T87LggCkWoENKWzhJK=KU2
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R47
-R48
+R49
+R50
 !i113 1
 R12
 R13
 Eshifter_7
-Z50 w1650063736
+Z52 w1650063736
 R2
 R3
 R4
 !i122 2
 R0
-Z51 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl
-Z52 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl
+Z53 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl
+Z54 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl
 l0
 L7 1
 V2j4KYfQBHLLJmEQ0`0F5o1
 !s100 O7Sm>dQK65`_8kS^@B_h23
 R7
 31
-R8
+R17
 !i10b 1
 R9
-Z53 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl|
-Z54 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl|
+Z55 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl|
+Z56 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/shifter_7.vhdl|
 !i113 1
 R12
 R13
@@ -424,39 +424,39 @@ R4
 DEx4 work 9 shifter_7 0 22 2j4KYfQBHLLJmEQ0`0F5o1
 !i122 2
 l15
-R49
+R51
 VoJ1RMkKlC39hcc8mXNLQ@3
 !s100 IjNoffVeTlIITm4e`RPPI0
 R7
 31
-R8
+R17
 !i10b 1
 R9
-R53
-R54
+R55
+R56
 !i113 1
 R12
 R13
 Esign_extender_10_component
-Z55 w1650137614
+Z57 w1650137614
 R2
 R3
 R4
 !i122 0
 R0
-Z56 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl
-Z57 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl
+Z58 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl
+Z59 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl
 l0
 L7 1
 V1;MD2R7b^zV06ISO@MXS51
 !s100 gFbgCNb@4N<;FgXfAYNZV0
 R7
 31
-Z58 !s110 1651936204
+Z60 !s110 1651945516
 !i10b 1
-Z59 !s108 1651936204.000000
-Z60 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl|
-Z61 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl|
+Z61 !s108 1651945516.000000
+Z62 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl|
+Z63 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_10.vhdl|
 !i113 1
 R12
 R13
@@ -467,39 +467,39 @@ R4
 DEx4 work 26 sign_extender_10_component 0 22 1;MD2R7b^zV06ISO@MXS51
 !i122 0
 l15
-Z62 L14 11
+Z64 L14 11
 VFAn<V6acVCk]En>omjW:a1
 !s100 nQNklMk>CXz@6bkB73P6F1
 R7
 31
-R58
-!i10b 1
-R59
 R60
+!i10b 1
 R61
+R62
+R63
 !i113 1
 R12
 R13
 Esign_extender_7_component
-Z63 w1650138682
+Z65 w1650138682
 R2
 R3
 R4
 !i122 1
 R0
-Z64 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl
-Z65 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl
+Z66 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl
+Z67 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl
 l0
 L7 1
 Vge>B:ULOJSkYIKb<fF1740
 !s100 K7Zl2CXFWI3PSV`:o:@X=2
 R7
 31
-R58
+R17
 !i10b 1
-R59
-Z66 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl|
-Z67 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl|
+R9
+Z68 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl|
+Z69 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/sign_extender_7.vhdl|
 !i113 1
 R12
 R13
@@ -510,28 +510,28 @@ R4
 DEx4 work 25 sign_extender_7_component 0 22 ge>B:ULOJSkYIKb<fF1740
 !i122 1
 l15
-R62
+R64
 Vc21HPbC9<LBdJbhjZ[c4;1
 !s100 _0R:Vh=j^e^lfjIh]VQ893
 R7
 31
-R58
+R17
 !i10b 1
-R59
-R66
-R67
+R9
+R68
+R69
 !i113 1
 R12
 R13
 Etemp_1
-Z68 w1650921066
+Z70 w1650921066
 R2
 R3
 R4
 !i122 10
 R0
-Z69 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd
-Z70 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd
+Z71 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd
+Z72 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd
 l0
 L6 1
 V>Z;2=T7ckQ7l<L^9_T2;I0
@@ -540,9 +540,9 @@ R7
 31
 R8
 !i10b 1
-R9
-Z71 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd|
-Z72 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd|
+R28
+Z73 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd|
+Z74 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/temps.vhd|
 !i113 1
 R12
 R13
@@ -560,21 +560,21 @@ R7
 31
 R8
 !i10b 1
-R9
-R71
-R72
+R28
+R73
+R74
 !i113 1
 R12
 R13
 Etemp_2
-R68
+R70
 R2
 R3
 R4
 !i122 10
 R0
-R69
-R70
+R71
+R72
 l0
 L56 1
 Vnzlzf=6c7kBE^kmA<na471
@@ -583,9 +583,9 @@ R7
 31
 R8
 !i10b 1
-R9
-R71
-R72
+R28
+R73
+R74
 !i113 1
 R12
 R13
@@ -603,21 +603,21 @@ R7
 31
 R8
 !i10b 1
-R9
-R71
-R72
+R28
+R73
+R74
 !i113 1
 R12
 R13
 Etemp_3
-R68
+R70
 R2
 R3
 R4
 !i122 10
 R0
-R69
-R70
+R71
+R72
 l0
 L107 1
 VYGfU@3mPB:dk0c>WN5Y473
@@ -626,9 +626,9 @@ R7
 31
 R8
 !i10b 1
-R9
-R71
-R72
+R28
+R73
+R74
 !i113 1
 R12
 R13
@@ -646,20 +646,20 @@ R7
 31
 R8
 !i10b 1
-R9
-R71
-R72
+R28
+R73
+R74
 !i113 1
 R12
 R13
 Etestbench
-Z73 w1650957870
+Z75 w1650957870
 R4
 R3
 !i122 12
 R0
-Z74 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl
-Z75 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl
+Z76 8/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl
+Z77 F/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
@@ -668,8 +668,8 @@ R7
 31
 R8
 !i10b 1
-R9
-Z76 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl|
+R28
+Z78 !s90 -reportprogress|300|-93|-work|work|/home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl|
 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl|
 !i113 1
 R12
@@ -687,9 +687,9 @@ R7
 31
 R8
 !i10b 1
-R9
-R76
-Z77 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl|
+R28
+R78
+Z79 !s107 /home/winston/Documents/Acads/sem_2/EE309/iitb_risc/Testbench.vhdl|
 !i113 1
 R12
 R13
