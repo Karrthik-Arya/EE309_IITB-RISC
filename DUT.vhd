@@ -177,6 +177,7 @@ component alu is
 	 end component;
 begin
 	output_vector(5 downto 0) <= state;
+	output_vector(6) <= carry;
    stateTrans_instance: ins_decoder
 			port map (
 					next_state => next_state,
@@ -185,8 +186,7 @@ begin
  					cz => curr_ins(1 downto 0),
 					imm => curr_ins(8 downto 0),
 					carry=> carry,
-					zero=> zero,
-					test_out=>output_vector(6 downto 6)
+					zero=> zero
  					);
 					
 	stateSet_instance: ins_setter

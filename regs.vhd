@@ -24,8 +24,8 @@ entity registers is
 architecture working of registers is 
 type mem_array is array (0 to 7 ) of std_logic_vector (15 downto 0);
 signal regs: mem_array :=(
-   x"0001",x"0002", x"0003", x"0004",
-	x"0005",x"0006", x"0007", x"0008"
+   x"FFFF",x"FFFF", x"0000", x"0001",
+	x"0000",x"0000", x"0000", x"0000"
    ); 
 begin
 

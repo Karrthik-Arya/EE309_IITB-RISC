@@ -13,7 +13,7 @@ output_vector[2] << ins_setter:stateSet_instance.state[2]
 output_vector[3] << ins_setter:stateSet_instance.state[3]
 output_vector[4] << ins_setter:stateSet_instance.state[4]
 output_vector[5] << ins_setter:stateSet_instance.state[5]
-output_vector[6] << ins_decoder:stateTrans_instance.test_out[0]
+output_vector[6] << alu:alu_instance.carry_out
 
 
 |DUT|ins_decoder:stateTrans_instance
@@ -477,9 +477,9 @@ op_code[0] => Equal6.IN2
 op_code[0] => Equal9.IN3
 op_code[0] => Equal10.IN3
 op_code[0] => Equal11.IN3
-op_code[0] => Equal12.IN1
-op_code[0] => Equal13.IN3
-op_code[0] => Equal30.IN3
+op_code[0] => Equal12.IN3
+op_code[0] => Equal13.IN1
+op_code[0] => Equal14.IN3
 op_code[1] => Equal0.IN2
 op_code[1] => Equal1.IN2
 op_code[1] => Equal2.IN2
@@ -490,9 +490,9 @@ op_code[1] => Equal6.IN3
 op_code[1] => Equal9.IN2
 op_code[1] => Equal10.IN2
 op_code[1] => Equal11.IN1
-op_code[1] => Equal12.IN3
-op_code[1] => Equal13.IN2
-op_code[1] => Equal30.IN1
+op_code[1] => Equal12.IN1
+op_code[1] => Equal13.IN3
+op_code[1] => Equal14.IN2
 op_code[2] => Equal0.IN1
 op_code[2] => Equal1.IN1
 op_code[2] => Equal2.IN1
@@ -505,7 +505,7 @@ op_code[2] => Equal10.IN1
 op_code[2] => Equal11.IN2
 op_code[2] => Equal12.IN0
 op_code[2] => Equal13.IN0
-op_code[2] => Equal30.IN0
+op_code[2] => Equal14.IN0
 op_code[3] => Equal0.IN0
 op_code[3] => Equal1.IN0
 op_code[3] => Equal2.IN0
@@ -517,14 +517,14 @@ op_code[3] => Equal9.IN0
 op_code[3] => Equal10.IN0
 op_code[3] => Equal11.IN0
 op_code[3] => Equal12.IN2
-op_code[3] => Equal13.IN1
-op_code[3] => Equal30.IN2
-cz[0] => Equal7.IN1
-cz[0] => Equal8.IN0
-cz[0] => Equal14.IN1
-cz[1] => Equal7.IN0
-cz[1] => Equal8.IN1
-cz[1] => Equal14.IN0
+op_code[3] => Equal13.IN2
+op_code[3] => Equal14.IN1
+cz[0] => Equal7.IN0
+cz[0] => Equal8.IN1
+cz[0] => Equal15.IN1
+cz[1] => Equal7.IN1
+cz[1] => Equal8.IN0
+cz[1] => Equal15.IN0
 imm[0] => Mux5.IN8
 imm[0] => next_state[2].DATAB
 imm[0] => next_state[3].DATAA

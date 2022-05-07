@@ -60,13 +60,13 @@ begin
 		next_state<= "111111";
     	
 		elsif (op_code="0001") then
-			 if(cz = "01") then
+			 if(cz = "10") then
 				if(carry = '1') then
 					next_state<= "000010";
 				else 
 					next_state<= "000001";
 					end if;
-			 elsif(cz="10")	then
+			 elsif(cz="01")	then
 				if(zero = '1') then
 					next_state <= "000010";
 				else
@@ -82,13 +82,13 @@ begin
 		next_state <= "000010";
 		
 		elsif( op_code="0010") then
-			 if(cz = "01") then
+			 if(cz = "10") then
 				if(carry = '1') then
 					next_state<= "000010";
 				else 
 					next_state<= "000001";
 					end if;
-			 elsif(cz="10")	then
+			 elsif(cz="01")	then
 				if(zero = '1') then
 					next_state <= "000010";
 				else
@@ -361,8 +361,6 @@ begin
 		when "100001"=> --s33
 		 if(op_code="1000") then
 			next_state <="100110";
-		 elsif(op_code="1001") then
-			next_state <="000001";
 		elsif (op_code="1001") then
 			next_state <= "100110";
 		 end if;
